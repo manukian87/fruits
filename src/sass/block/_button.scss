@@ -1,0 +1,23 @@
+.btn{
+    width: 170px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(113, 237, 65);
+    text-transform: uppercase;;
+    text-align: center;
+    font-weight: 700;
+    color: $color_link;
+    font-size: 17px;
+    transition: 0.8s ease all;
+    &:hover{
+        background-color: $bghover;
+        color: $white;
+        transform: scale(0.95);
+    }
+    &-min{
+        width: 200px;
+        height: 40px;
+    }
+
+}

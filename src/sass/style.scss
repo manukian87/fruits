@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@import "libs/bootstrap-reboot.min";
+
+@import "base/mixins";
+@import "base/variables";
+@import "base/media";
+
+@import "block/header";
+@import "block/button";
+@import "block/title";
+@import "block/promo";
+@import "block/catalog";
+.container {
+    position: relative;
+    width: 1140px;
+    margin: 0 auto;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 1;
+
+
+    }
+}

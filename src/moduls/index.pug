@@ -1,0 +1,194 @@
+extends blockPug/header
+block   variables
+    -   var pageTitle = 'Service'
+block content
+    header
+        .header
+            
+            .header__wrapper
+                .logo
+                    a(href="#").logo__link
+                        img(src="img/logo/logo.png", alt="logo")
+                nav 
+                    .menu 
+                        ul.menu__item.title
+                            li.menu__link: a(href="#")  Главная
+                            li.menu__link: a(href="#")  Каталог
+                            li.menu__link: a(href="#")  Доставка
+                            li.menu__link: a(href="#")  О нас
+                            li.menu__link: a(href="#")  Контакты
+                    .hamburger 
+                        span 
+                        span 
+                        span
+                .subheader.title 
+                    .subheader__phone 
+                        a(href="tel:+380635615620" class="subheader__phone_call")   0635615620
+                    button.subheader__btn.btn 
+                        .subheader__btn_text Заказать звонок  
+    section.promo 
+        .container
+            .promo__wrapper 
+                h1.promo__title.title.title_fz60   начни день 
+                p.promo__descr.title.title_fz48 с полезной сладости, и заметишь, как жизнь стала капельку солнечней и добрее
+                
+    section.catalog
+        h2.catalog__title.title.title_fz60 каталог
+        ul.catalog__tabs
+            li.catalog__tabs_item.active Орехи 
+            li.catalog__tabs_item Сухофрукты 
+            li.catalog__tabs_item шоколад
+        .container
+            .catalog__nuts#catalog
+                .catalog__wrapper
+                    .catalog__card.title
+                        h3.catalog__card_subtitle Миндаль
+                        img(src="img/card/nuts/mindal.jpg", alt="mindal")
+                        .catalog__card_price.title.title_fz22 
+                            .catalog__card_price-title Цена
+                            .catalog__card_price-total
+                                span 40
+                                .catalog__card_price_descr грн. 
+                        h4.catalog__card_subtitle-min.title.title_fz12 Миндаль
+                        .catalog__card_weight.title
+                            .catalog__card_weight-title.title_fz12 Вес
+                                span *
+                            ul.catalog__card_weight-wrapper
+                                li.catalog__card_weight-item 100 г
+                                li.catalog__card_weight-item 200 г
+                                li.catalog__card_weight-item 300 г
+                                li.catalog__card_weight-item 500 г
+                                li.catalog__card_weight-item 1000 г
+                        .catalog__card_divider
+                        button.catalog__card_btn.btn.btn-min купить
+                    .catalog__card.title
+                        h3.catalog__card_subtitle Кедр
+                        img(src="img/card/nuts/kedrovy.jpg", alt="kedrov")
+                        .catalog__card_price.title.title_fz22 
+                            .catalog__card_price-title Цена
+                            .catalog__card_price-total
+                                span 50
+                                .catalog__card_price_descr грн. 
+                        h4.catalog__card_subtitle-min.title.title_fz12 Кедр
+                        .catalog__card_weight.title
+                            .catalog__card_weight-title.title_fz12 Вес
+                                span *
+                            ul.catalog__card_weight-wrapper
+                                li.catalog__card_weight-item 100 г
+                                li.catalog__card_weight-item 200 г
+                                li.catalog__card_weight-item 300 г
+                                li.catalog__card_weight-item 500 г
+                                li.catalog__card_weight-item 1000 г
+                        .catalog__card_divider
+                        button.catalog__card_btn.btn.btn-min купить
+                    .catalog__card.title
+                        h3.catalog__card_subtitle Арахис
+                        img(src="img/card/nuts/peanut.jpg", alt="peanut")
+                        .catalog__card_price.title.title_fz22 
+                            .catalog__card_price-title Цена
+                            .catalog__card_price-total
+                                span 50
+                                .catalog__card_price_descr грн. 
+                        h4.catalog__card_subtitle-min.title.title_fz12 Арахис
+                        .catalog__card_weight.title
+                            .catalog__card_weight-title.title_fz12 Вес
+                                span *
+                            ul.catalog__card_weight-wrapper
+                                li.catalog__card_weight-item 100 г
+                                li.catalog__card_weight-item 200 г
+                                li.catalog__card_weight-item 300 г
+                                li.catalog__card_weight-item 500 г
+                                li.catalog__card_weight-item 1000 г
+                        .catalog__card_divider
+                        button.catalog__card_btn.btn.btn-min купить
+            .catalog__fruits#catalog
+                .catalog__wrapper
+                    .catalog__card.title
+                        h3.catalog__card_subtitle Фрукт1
+                        img(src="img/card/fruits/fr1.jpg", alt="fr1")
+                        .catalog__card_price.title.title_fz22 
+                            .catalog__card_price-title Цена
+                            .catalog__card_price-total
+                                span 40
+                                .catalog__card_price_descr грн. 
+                        h4.catalog__card_subtitle-min.title.title_fz12 Фрукт1 
+                        .catalog__card_weight.title
+                            .catalog__card_weight-title.title_fz12 Вес
+                                span *
+                            ul.catalog__card_weight-wrapper
+                                li.catalog__card_weight-item 100 г
+                                li.catalog__card_weight-item 200 г
+                                li.catalog__card_weight-item 300 г
+                                li.catalog__card_weight-item 500 г
+                                li.catalog__card_weight-item 1000 г
+                        .catalog__card_divider
+                        button.catalog__card_btn.btn.btn-min купить
+                    .catalog__card.title
+                        h3.catalog__card_subtitle Фрукт2
+                        img(src="img/card/fruits/fr2.jpg", alt="fr2")
+                        .catalog__card_price.title.title_fz22 
+                            .catalog__card_price-title Цена
+                            .catalog__card_price-total
+                                span 50
+                                .catalog__card_price_descr грн. 
+                        h4.catalog__card_subtitle-min.title.title_fz12 Фрукт2
+                        .catalog__card_weight.title
+                            .catalog__card_weight-title.title_fz12 Вес
+                                span *
+                            ul.catalog__card_weight-wrapper
+                                li.catalog__card_weight-item 100 г
+                                li.catalog__card_weight-item 200 г
+                                li.catalog__card_weight-item 300 г
+                                li.catalog__card_weight-item 500 г
+                                li.catalog__card_weight-item 1000 г
+                        .catalog__card_divider
+                        button.catalog__card_btn.btn.btn-min купить
+                    .catalog__card.title
+                        h3.catalog__card_subtitle Фрукт3
+                        img(src="img/card/fruits/fr3.jpg", alt="fr3")
+                        .catalog__card_price.title.title_fz22 
+                            .catalog__card_price-title Цена
+                            .catalog__card_price-total
+                                span 50
+                                .catalog__card_price_descr грн. 
+                        h4.catalog__card_subtitle-min.title.title_fz12 Фрукт3
+                        .catalog__card_weight.title
+                            .catalog__card_weight-title.title_fz12 Вес
+                                span *
+                            ul.catalog__card_weight-wrapper
+                                li.catalog__card_weight-item 100 г
+                                li.catalog__card_weight-item 200 г
+                                li.catalog__card_weight-item 300 г
+                                li.catalog__card_weight-item 500 г
+                                li.catalog__card_weight-item 1000 г
+                        .catalog__card_divider
+                        button.catalog__card_btn.btn.btn-min купить
+            .catalog__chocolate#catalog
+                .catalog__wrapper
+                    .catalog__card.title
+                        h3.catalog__card_subtitle Шоколад
+                        img(src="img/card/shocolad/shoc1.jpg", alt="shocolad")
+                        .catalog__card_price.title.title_fz22 
+                            .catalog__card_price-title Цена
+                            .catalog__card_price-total
+                                span 40
+                                .catalog__card_price_descr грн. 
+                        h4.catalog__card_subtitle-min.title.title_fz12 Шоколад 
+                        .catalog__card_weight.title
+                            .catalog__card_weight-title.title_fz12 Вес
+                                span *
+                            ul.catalog__card_weight-wrapper
+                                li.catalog__card_weight-item 100 г
+                                li.catalog__card_weight-item 200 г
+                                li.catalog__card_weight-item 300 г
+                                li.catalog__card_weight-item 500 г
+                                li.catalog__card_weight-item 1000 г
+                        .catalog__card_divider
+                        button.catalog__card_btn.btn.btn-min купить
+    script(src="js/main.js") 
+                
+
+                     
+
+
+
