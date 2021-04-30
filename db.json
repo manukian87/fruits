@@ -1,0 +1,39 @@
+{
+  "menu": [
+    {
+      "title": "Фрукт1",
+      "img": "img/card/fruits/fr1.jpg",
+      "altimg": "fr1",
+      "price1": 40,
+      "price2": 50,
+      "price3": 60,
+      "price4": 70,
+      "price5": 80,
+      "subtitle": "Фрукт1"
+    },
+    {
+     "title": "Фрукт2",
+      "img": "img/card/fruits/fr2.jpg",
+      "altimg": "fr2",
+      "price1": 400,
+      "price2": 500,
+      "price3": 600,
+      "price4": 70,
+      "price5": 80,
+      "subtitle": "Фрукт2"
+    },
+    {
+      "title": "Фрукт3",
+      "img": "img/card/fruits/fr3.jpg",
+      "altimg": "fr3",
+      "price1": 500,
+      "price2": 700,
+      "price3": 900,
+      "price4": 70,
+      "price5": 80,
+      "subtitle": "Фрукт3"
+    }
+  ],
+  "requests": [
+  ]
+}

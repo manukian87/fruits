@@ -20,6 +20,9 @@
 @import "block/title";
 @import "block/promo";
 @import "block/catalog";
+@import "block/modal";
+@import "block/aboutUs";
+
 .container {
     position: relative;
     width: 1140px;
@@ -45,4 +48,8 @@
 
 
     }
+}
+.active-min{
+    background-color:$bghover;
+    color: $white;
 }
