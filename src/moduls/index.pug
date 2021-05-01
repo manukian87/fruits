@@ -240,8 +240,14 @@ block   content
                         .catalog__card_divider
                         button.catalog__card_btn.btn.btn-min(data-btn) купить
     section.aboutUs 
-        .container 
-            .aboutUs__wrapper 
+        .container
+            h2.aboutUs__title.title.title_fz48 ПОЛЕЗНЫЕ СЛАДОСТИ <span>ИЛИ</span> НЕМНОГО О СУХОФРУКТАХ
+            p.aboutUs__descr.info.title.title_fz16: i Кто из нас не любит сладкий вкус изюма и кураги, манящий аромат мясистого чернослива и нежную свежесть вяленой клюкви? Как много существует различных сухофруктов, и лучшего десерта просто не найти! 
+            .aboutUs__wrapper
+                .aboutUs__wrapper-descr.title 
+                    p <span>Популярные сегодня</span> <span class="black"> сухофрукты </span> представляют собой высушенные фрукты и ягоды, остаток влажности которых составляет около 20%. Получают сухофрукты при помощи сушки плодов различных фруктов и ягод на открытом воздухе (на солнце или в тени).  
+                    p <span>Представляя</span> собой удобную замену свежим фруктам и ягодам, сухофрукты хранятся продолжительное время и являются отличной добавкой к ежедневному рациону питания.
+                    p <span>Сухофрукты</span> делаются практически из всех видов фруктов и ягод. <span class="black">Смесь сухофруктов</span> - это прекрасный вариант "перекуса" на работе и в школе. Полезные свойства сухофруктов очевидны, а нестрогие правила хранения делают их удобным и универсальным продуктом питания. 
                 .aboutUs__slider
                     .aboutUs__slider_btn 
                         .aboutUs__slider_btn-prev &lsaquo;
@@ -253,7 +259,18 @@ block   content
                             .aboutUs__slider_inner-slide
                                 img(src="img/slide/chocolad.jpg", alt="chocolad") 
                             .aboutUs__slider_inner-slide
-                                img(src="img/slide/fruct.jpg", alt="fruct")   
+                                img(src="img/slide/fruct.jpg", alt="fruct")
+    section.delivery 
+        .container 
+            h2.delivery__title.title.title_fz48 Доставка 
+            .delivery__icons: img(src="icons/delivery/dostavka.png", alt="delivery")
+            h3.delivery__descr.title.title_fz24 Доставим сухофрукты и орехы быстро и качественно
+            .divider 
+            p.delivery__descr-text.info.title.title_fz16 Нам очень Важно, чтобы нашим Клиентам было максимально удобно совершать покупку у нас в нашем магазине "Орехи и Сладости". Мы предлагаем Вам приятные цены и качественную доставку. Все, что нужно сделать, это: 
+            ol.delivery__info
+                li.delivery__info-text Сделать заказ на сайте www.......m, позвонить по номеру 8 (063) 561-56-20, написать на почту serpentel83@gmail.com или связаться с нами через любой мессенджер: WatsApp и Viber, которые привязаны к номеру телефона 8 (063) 561-56-20.
+                li.delivery__info-text В назначенное время встретиться с нашим представителем в удобном для вас месте. Оплатить заказ наличными или по карте курьеру.  
+
     section.modal 
         .modal__dialog
             .modal__catalog 
@@ -262,7 +279,27 @@ block   content
                     .modal__title   Мы свяжемся с вами как можно быстрее!
                     input(required placeholder="Ваше имя" name="name" type="text" class="modal__input")
                     input(required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input")
-                    button.btn.btn__modal(data-btn) Перезвонить мне  
+                    button.btn.btn__modal(data-btn) Перезвонить мне
+    section.footer 
+        .footer__wrapper 
+            .footer__social 
+                .fc
+                    .footer__social-fb: a(href="#"): img(src="icons/social/facebook-brands.svg", alt="fk")
+                .fc
+                    .footer__social-tg: a(href="#"): img(src="icons/social/telegram.svg", alt="tg")
+                .fc
+                    .footer__social-inst: a(href="#"): img(src="icons/social/instagram.svg", alt="inst")
+            .footer__logo 
+                a(href="#"): img(src="img/logo/logo.png", alt="logo")  
+            .footer__contact 
+                .footer__contact-tel
+                    a(href="tel:+380635615620") +38(063)561-56-20
+                        img(src="icons/contacts/phone.svg", alt="vib")
+                .footer__contact-email
+                    a(href="mailto:serpentel83@gmail.com") serpentel83@gmail.com
+                    img(src="icons/contacts/mail4.svg", alt="@")
+
+
     script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
     script(src="js/main.js") 
                 

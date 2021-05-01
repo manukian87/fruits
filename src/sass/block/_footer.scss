@@ -1,0 +1,94 @@
+.footer{
+  padding: 20px;
+  margin-top: 50px;
+  min-height: 100px;
+  background-color: $main_color;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__social{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 45px;
+    width: 150px; 
+    &-fb,
+    &-inst,
+    &-tg{
+      display: block;
+      margin: 0 auto;
+      width: 45px;
+      height: 45px;
+      img{
+        margin: 4px 4px;
+        width: 30px;
+        height: 30px;
+        transition: 0.7s all ease;
+        &:hover {
+          background-color: $green;
+          border-radius: 100%;
+        }
+      }
+    } 
+  }
+  &__logo{
+    width: 100px;
+    height: 100px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.7s all ease;
+      &:hover {
+        background-color: $green;
+        border-radius: 100%;
+      }
+    }
+  }
+  &__contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 350px;
+    &-tel{
+      
+      a {
+        color: $white;
+      }
+      img{
+        margin-left: 18px;
+        width: 22px;
+        height: 22px;
+        transition: 0.7s all ease;
+          &:hover {
+            background-color: $green;
+            border-radius: 100%;
+          }
+      }
+    }
+    &-email{
+      margin-top: 15px;
+      a {
+        color: $white;
+      }
+    
+      img {
+        margin-left: 18px;
+        width: 20px;
+        height: 20px;
+        transition: 0.7s all ease;
+
+          &:hover {
+            background-color: $green;
+            border-radius: 100%;
+          }
+      }
+      
+    }
+  }
+
+ 
+  
+}

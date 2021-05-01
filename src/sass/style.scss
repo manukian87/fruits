@@ -11,6 +11,8 @@
 
 @import "libs/bootstrap-reboot.min";
 
+
+
 @import "base/mixins";
 @import "base/variables";
 @import "base/media";
@@ -22,6 +24,8 @@
 @import "block/catalog";
 @import "block/modal";
 @import "block/aboutUs";
+@import "block/delivery";
+@import "block/footer";
 
 .container {
     position: relative;
@@ -52,4 +56,20 @@
 .active-min{
     background-color:$bghover;
     color: $white;
+}
+.divider{
+    display: block;
+    margin: 0 auto;
+    width: 650px;
+    height: 1px;
+    background-color: $red;
+}
+.info{
+    display: block;
+    text-align: center;
+    padding: 15px;
+    max-width: 700px;
+    color: rgba(133, 19, 19, 0.75);
+    border:dotted 1px rgba(133, 19, 19, 1);
+    border-radius: 3px;
 }
