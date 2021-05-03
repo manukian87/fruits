@@ -5,8 +5,7 @@ block   variables
 block   content
 
     header
-        .header
-            
+        .header 
             .header__wrapper
                 .logo
                     a(href="#").logo__link
@@ -15,26 +14,25 @@ block   content
                     .menu 
                         ul.menu__item.title
                             li.menu__link: a(href="#")  Главная
-                            li.menu__link: a(href="#")  Каталог
-                            li.menu__link: a(href="#")  Доставка
-                            li.menu__link: a(href="#")  О нас
-                            li.menu__link: a(href="#")  Контакты
+                            li.menu__link: a(href="#catalog__block")  Каталог
+                            li.menu__link: a(href="#delivery__block")  Доставка
+                            li.menu__link: a(href="#aboutUs__block")  О нас
+                            li.menu__link: a(href="#contact__block")  Контакты
                     .hamburger 
                         span 
                         span 
                         span
                 .subheader.title 
                     .subheader__phone 
-                        a(href="tel:+380635615620" class="subheader__phone_call")   0635615620
+                        a(href="tel:+380635615620" class="subheader__phone_call")   (063)-561-56-20
                     button.subheader__btn.btn(data-btn) 
                         .subheader__btn_text Заказать звонок  
     section.promo 
-        .container
             .promo__wrapper 
                 h1.promo__title.title.title_fz60   начни день 
                 p.promo__descr.title.title_fz48 с полезной сладости, и заметишь, как жизнь стала капельку солнечней и добрее
                 
-    section.catalog
+    section.catalog#catalog__block
         h2.catalog__title.title.title_fz60 каталог
         ul.catalog__tabs
             li.catalog__tabs_item.active Орехи 
@@ -239,7 +237,7 @@ block   content
                                 li.catalog__card_weight-item 1000 г
                         .catalog__card_divider
                         button.catalog__card_btn.btn.btn-min(data-btn) купить
-    section.aboutUs 
+    section.aboutUs#aboutUs__block 
         .container
             h2.aboutUs__title.title.title_fz48 ПОЛЕЗНЫЕ СЛАДОСТИ <span>ИЛИ</span> НЕМНОГО О СУХОФРУКТАХ
             p.aboutUs__descr.info.title.title_fz16: i Кто из нас не любит сладкий вкус изюма и кураги, манящий аромат мясистого чернослива и нежную свежесть вяленой клюкви? Как много существует различных сухофруктов, и лучшего десерта просто не найти! 
@@ -260,7 +258,7 @@ block   content
                                 img(src="img/slide/chocolad.jpg", alt="chocolad") 
                             .aboutUs__slider_inner-slide
                                 img(src="img/slide/fruct.jpg", alt="fruct")
-    section.delivery 
+    section.delivery#delivery__block 
         .container 
             h2.delivery__title.title.title_fz48 Доставка 
             .delivery__icons: img(src="icons/delivery/dostavka.png", alt="delivery")
@@ -271,15 +269,15 @@ block   content
                 li.delivery__info-text Сделать заказ на сайте www.......m, позвонить по номеру 8 (063) 561-56-20, написать на почту serpentel83@gmail.com или связаться с нами через любой мессенджер: WatsApp и Viber, которые привязаны к номеру телефона 8 (063) 561-56-20.
                 li.delivery__info-text В назначенное время встретиться с нашим представителем в удобном для вас месте. Оплатить заказ наличными или по карте курьеру.  
 
-    section.modal 
-        .modal__dialog
-            .modal__catalog 
-                form(action="#")
-                    .modal__close(data-close)   &times;
-                    .modal__title   Мы свяжемся с вами как можно быстрее!
-                    input(required placeholder="Ваше имя" name="name" type="text" class="modal__input")
-                    input(required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input")
-                    button.btn.btn__modal(data-btn) Перезвонить мне
+    //- section.modal 
+    //-     .modal__dialog
+    //-         .modal__catalog 
+    //-             form(action="#")
+    //-                 .modal__close(data-close)   &times;
+    //-                 .modal__title   Мы свяжемся с вами как можно быстрее!
+    //-                 input(required placeholder="Ваше имя" name="name" type="text" class="modal__input")
+    //-                 input(required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input")
+    //-                 button.btn.btn__modal(data-btn) Перезвонить мне
     section.footer 
         .footer__wrapper 
             .footer__social 
@@ -291,7 +289,7 @@ block   content
                     .footer__social-inst: a(href="#"): img(src="icons/social/instagram.svg", alt="inst")
             .footer__logo 
                 a(href="#"): img(src="img/logo/logo.png", alt="logo")  
-            .footer__contact 
+            .footer__contact#contact__block 
                 .footer__contact-tel
                     a(href="tel:+380635615620") +38(063)561-56-20
                         img(src="icons/contacts/phone.svg", alt="vib")

@@ -7,6 +7,7 @@
     &__wrapper{
         padding-top: 25px;
         display: grid;
+        justify-items: center;
         grid-template: minmax(450px,auto) / repeat(3, 1fr);
         grid-auto-rows: minmax(450px);
         row-gap: 20px;

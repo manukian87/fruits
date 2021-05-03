@@ -15,7 +15,7 @@
 
 @import "base/mixins";
 @import "base/variables";
-@import "base/media";
+
 
 @import "block/header";
 @import "block/button";
@@ -26,6 +26,8 @@
 @import "block/aboutUs";
 @import "block/delivery";
 @import "block/footer";
+
+
 
 .container {
     position: relative;
@@ -73,3 +75,4 @@
     border:dotted 1px rgba(133, 19, 19, 1);
     border-radius: 3px;
 }
+@import "base/media";

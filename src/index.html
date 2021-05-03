@@ -9,23 +9,23 @@
   </head>
   <body>
     <header>
-      <div class="header">
+      <div class="header"> 
         <div class="header__wrapper">
           <div class="logo"><a class="logo__link" href="#"><img src="img/logo/logo.png" alt="logo"></a></div>
           <nav> 
             <div class="menu"> 
               <ul class="menu__item title">
                 <li class="menu__link"><a href="#"> Главная</a></li>
-                <li class="menu__link"><a href="#"> Каталог</a></li>
-                <li class="menu__link"><a href="#"> Доставка</a></li>
-                <li class="menu__link"><a href="#"> О нас</a></li>
-                <li class="menu__link"><a href="#"> Контакты</a></li>
+                <li class="menu__link"><a href="#catalog__block"> Каталог</a></li>
+                <li class="menu__link"><a href="#delivery__block"> Доставка</a></li>
+                <li class="menu__link"><a href="#aboutUs__block"> О нас</a></li>
+                <li class="menu__link"><a href="#contact__block"> Контакты</a></li>
               </ul>
             </div>
             <div class="hamburger"> <span> </span><span> </span><span></span></div>
           </nav>
           <div class="subheader title"> 
-            <div class="subheader__phone"> <a class="subheader__phone_call" href="tel:+380635615620">  0635615620</a></div>
+            <div class="subheader__phone"> <a class="subheader__phone_call" href="tel:+380635615620">  (063)-561-56-20</a></div>
             <button class="subheader__btn btn" data-btn> 
               <div class="subheader__btn_text">Заказать звонок  </div>
             </button>
@@ -34,14 +34,12 @@
       </div>
     </header>
     <section class="promo"> 
-      <div class="container">
-        <div class="promo__wrapper"> 
-          <h1 class="promo__title title title_fz60">  начни день </h1>
-          <p class="promo__descr title title_fz48">с полезной сладости, и заметишь, как жизнь стала капельку солнечней и добрее</p>
-        </div>
+      <div class="promo__wrapper"> 
+        <h1 class="promo__title title title_fz60">  начни день </h1>
+        <p class="promo__descr title title_fz48">с полезной сладости, и заметишь, как жизнь стала капельку солнечней и добрее</p>
       </div>
     </section>
-    <section class="catalog">
+    <section class="catalog" id="catalog__block">
       <h2 class="catalog__title title title_fz60">каталог</h2>
       <ul class="catalog__tabs">
         <li class="catalog__tabs_item active">Орехи </li>
@@ -239,7 +237,7 @@
         </div>
       </div>
     </section>
-    <section class="aboutUs"> 
+    <section class="aboutUs" id="aboutUs__block"> 
       <div class="container">
         <h2 class="aboutUs__title title title_fz48">ПОЛЕЗНЫЕ СЛАДОСТИ <span>ИЛИ</span> НЕМНОГО О СУХОФРУКТАХ</h2>
         <p class="aboutUs__descr info title title_fz16"><i>Кто из нас не любит сладкий вкус изюма и кураги, манящий аромат мясистого чернослива и нежную свежесть вяленой клюкви? Как много существует различных сухофруктов, и лучшего десерта просто не найти! </i></p>
@@ -265,7 +263,7 @@
         </div>
       </div>
     </section>
-    <section class="delivery"> 
+    <section class="delivery" id="delivery__block"> 
       <div class="container"> 
         <h2 class="delivery__title title title_fz48">Доставка </h2>
         <div class="delivery__icons"><img src="icons/delivery/dostavka.png" alt="delivery"></div>
@@ -276,19 +274,6 @@
           <li class="delivery__info-text">Сделать заказ на сайте www.......m, позвонить по номеру 8 (063) 561-56-20, написать на почту serpentel83@gmail.com или связаться с нами через любой мессенджер: WatsApp и Viber, которые привязаны к номеру телефона 8 (063) 561-56-20.</li>
           <li class="delivery__info-text">В назначенное время встретиться с нашим представителем в удобном для вас месте. Оплатить заказ наличными или по карте курьеру.  </li>
         </ol>
-      </div>
-    </section>
-    <section class="modal"> 
-      <div class="modal__dialog">
-        <div class="modal__catalog"> 
-          <form action="#">
-            <div class="modal__close" data-close>  &times;</div>
-            <div class="modal__title">  Мы свяжемся с вами как можно быстрее!</div>
-            <input class="modal__input" required placeholder="Ваше имя" name="name" type="text">
-            <input class="modal__input" required placeholder="Ваш номер телефона" name="phone" type="phone">
-            <button class="btn btn__modal" data-btn>Перезвонить мне</button>
-          </form>
-        </div>
       </div>
     </section>
     <section class="footer"> 
@@ -305,7 +290,7 @@
           </div>
         </div>
         <div class="footer__logo"> <a href="#"><img src="img/logo/logo.png" alt="logo"></a></div>
-        <div class="footer__contact"> 
+        <div class="footer__contact" id="contact__block"> 
           <div class="footer__contact-tel"><a href="tel:+380635615620">+38(063)561-56-20<img src="icons/contacts/phone.svg" alt="vib"></a></div>
           <div class="footer__contact-email"><a href="mailto:serpentel83@gmail.com">serpentel83@gmail.com</a><img src="icons/contacts/mail4.svg" alt="@"></div>
         </div>

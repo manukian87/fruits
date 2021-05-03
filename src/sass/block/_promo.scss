@@ -1,21 +1,19 @@
 .promo{
     min-height: 600px;
-    
     background: url("../img/bg/promo.jpg") no-repeat 50% / cover;
     &__wrapper{
-        width: 1021px;
         text-align: center;
         margin-left: 124px;
         padding-top: 122px;
     }
     &__title{
         padding-top: 50px;
-        color: rgb(246, 246, 246);
+        color: $bacground;
         line-height: 48px;
         font-weight: 400;
     }
     &__descr{
-        color: rgb(246, 246, 246);
+        color: $bacground;
         font-weight: 400;
     }
     

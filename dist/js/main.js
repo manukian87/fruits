@@ -380,11 +380,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     
 
-    
-       
-    
-   
-    
         
     nexBtn.addEventListener('click', () => {
         if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
@@ -409,6 +404,30 @@ window.addEventListener('DOMContentLoaded', () => {
         clearInterval(AutoSlide);
 
     });
+
+    
+    const Menu = document.querySelector('.menu__item'),
+        humburger = document.querySelector('.hamburger'),
+        menuLink = document.querySelectorAll('.menu__link');
+    
+    const addActive = act => {
+        Menu.classList.toggle(act);
+        humburger.classList.toggle(act);
+    };
+
+    humburger.addEventListener('click', () => {
+        addActive('active-menu');
+    });
+
+    menuLink.forEach(item => {
+        item.addEventListener('click', () => {
+            addActive('active-menu');
+        });
+    });
+
+
+
+
 
 
     
@@ -470,3 +489,4 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
