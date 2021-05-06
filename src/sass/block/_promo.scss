@@ -1,10 +1,20 @@
 .promo{
     min-height: 600px;
     background: url("../img/bg/promo.jpg") no-repeat 50% / cover;
+    h1 {
+      
+        font-size: 60px;
+        text-transform: uppercase;
+        color: $greenH1;
+        margin: 0 auto;
+        span{
+            font-size: 36px;
+        }
+    }
     &__wrapper{
         text-align: center;
         margin-left: 124px;
-        padding-top: 122px;
+        padding-top: 103px;
     }
     &__title{
         padding-top: 50px;

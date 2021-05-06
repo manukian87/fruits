@@ -1,42 +1,21 @@
-
-
 window.addEventListener('DOMContentLoaded', () => {
-    //tabs
+     //tabs
 
     const tabsWrapper = document.querySelector('.catalog__tabs'),
         tabs = document.querySelectorAll('.catalog__tabs_item'),
         content = document.querySelectorAll('#catalog'),
-        weightWrapper = document.querySelector('.catalog__card_weight-wrapper'),
+        weightWrapper = document.querySelectorAll('.catalog__card_weight-wrapper'),
         price = document.querySelectorAll('.price'),
         weigth = document.querySelectorAll('.catalog__card_weight-item'),
         nuts = document.querySelectorAll('.catalog__card'),
-        price1 = document.querySelectorAll('#price1');
-        // btnW100 = document.querySelector('#W100'),
-        // btnW200 = document.querySelector('#W200'),
-        // btnW300 = document.querySelector('#W300'),
-        // btnW500 = document.querySelector('#W500'),
-        // btnW1000 = document.querySelector('#W1000'),
-
-
-
-
-
-        // btnW100 = document.querySelector('#W100'),
-        // btnW200 = document.querySelector('#W200'),
-        // btnW300 = document.querySelector('#W300'),
-        // btnW500 = document.querySelector('#W500'),
-        // btnW1000 = document.querySelector('#W1000'),
-        // price = document.querySelectorAll('#price100'),
-        // 
-        // parentWeight = document.querySelector('.catalog__card_weight-wrapper'),
-        // fruits = document.querySelector('.catalog__fruits'),
-        // chocolat = document.querySelector('.catalog__chocolate'),
-        // nuts = document.querySelector('.catalog__nuts');
+        price1 = document.querySelector('#price1');
+        
     
      
     function hideMenu(item) {
         item.classList.add('hide');
         item.classList.remove('show', 'fade');
+        
     }
 
     function showMenu(item, i) {
@@ -48,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
     function hideContent() {
         tabs.forEach(tab => {
             tab.classList.remove('active');
+
         });
         content.forEach(item =>  hideMenu(item));
 
@@ -58,9 +38,6 @@ window.addEventListener('DOMContentLoaded', () => {
         showMenu(content, i);
       
     }
-
- 
-
 
     hideContent();
     showContent();
@@ -78,73 +55,85 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
-   
-
+   // show price
+ 
   
     function hidePrice() {
         weigth.forEach((item) => {
             item.classList.remove('active-min');
             
         });
-           price.forEach(item =>  hideMenu(item));
+
+        price.forEach(item => hideMenu(item));
+     
+            
+        
         // price.forEach(item => {
         //     item.classList.add('hide');
         //     item.classList.remove('show');
         // });
+       
 
     }
+       
+
+    //  activeBtnWeight.classList.add('active-min');
 
     function showPrice(i = 0) {
-        
         weigth[i].classList.add('active-min');
         // price[i].classList.add('show');
         // price[i].classList.remove('hide');
+  
         showMenu(price, i);
+       
+         
         
     }
+   
     
     hidePrice();
     showPrice();
 
-    function updatePrice() {
-        document.addEventListener('click', (e) => {
+    weightWrapper.forEach(btn => {
+        btn.addEventListener('click', (e) => {
             if (e.target && e.target.classList.contains('catalog__card_weight-item')) {
                 weigth.forEach((item, i) => {
                     if (item == e.target) {
+                        price.forEach(item => hideMenu(item));
                         hidePrice();
                         showPrice(i);
+                        
+                    
+                        
                     }
                 });
             }
         });
-    }
-    updatePrice();
+       
+    });
 
+
+    
    
- 
 
-    
-
-    
-
-
+    //modal
     const modalTrigger = document.querySelectorAll('[data-btn]'),
           modalClose = document.querySelector('[data-close]'),
           modal = document.querySelector('.modal');
     
     
     function showModal() {
-        // modal.classList.add('show','fade');
-        // modal.classList.remove('hide');
-         modal.classList.toggle('show');
+        modal.classList.add('show','fade');
+        modal.classList.remove('hide');
+        //  modal.classList.toggle('show');
         document.body.style.overflow = 'hidden';
         clearInterval(modalTimer);
     }
 
     function closeModal() {
-        // modal.classList.add('hide');
-        // modal.classList.remove('show', 'fade');
-         modal.classList.toggle('show');
+        modal.classList.add('hide');
+        modal.classList.remove('show', 'fade');
+        //  modal.classList.toggle('show');
         document.body.style.overflow = '';
     }
     
@@ -202,7 +191,7 @@ window.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const message = {
                 loading: 'img/form/spinner.svg',
-                saccess: 'Спасибо Мы с Вами свяжемся',
+                saccess: 'Спасибо!!! Мы с Вами свяжемся.',
                 failure: 'Произошла ошибка, пожалуйста, попробуйте позже'
             };
 
@@ -225,7 +214,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 .catch(() => {
                         showThanksModal(message.failure);
                     })
-                .finaly(() => {
+                .finally(() => {
                         form.reset();
                     });
             
@@ -282,7 +271,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 this.classes.forEach(className => element.classList.add(className));
             }
             element.innerHTML = `
-                <h3 class="catalog__card_subtitle">${this.title}</h3><img src=${this.src} alt=${this.alt}>
+                <h3 class="catalog__card_subtitle">${this.title}</h3>
+                <img src=${this.src} alt=${this.alt}>
                 <div class="catalog__card_price title title_fz22"> 
                     <div class="catalog__card_price-title">Цена</div>
                     <div class="catalog__card_price-total">
@@ -299,7 +289,7 @@ window.addEventListener('DOMContentLoaded', () => {
               <div class="catalog__card_weight title">
                 <div class="catalog__card_weight-title title_fz12">Вес<span>*</span></div>
                 <ul class="catalog__card_weight-wrapper">
-                  <li class="catalog__card_weight-item">100 г</li>
+                  <li class="catalog__card_weight-item active-min">100 г</li>
                   <li class="catalog__card_weight-item">200 г</li>
                   <li class="catalog__card_weight-item">300 г</li>
                   <li class="catalog__card_weight-item">500 г</li>
@@ -313,34 +303,34 @@ window.addEventListener('DOMContentLoaded', () => {
             this.parent.append(element);
         }
     }
-    new CardMenu(
-       "Фрукт1",
-        "img/card/fruits/fr1.jpg",
-        "fr1",
-        40,
-        50,
-        60,
-        70,
-        80,
-        "Фрукт1",
-        '.catalog .catalog__fruits .catalog__wrapper'
-        // 'catalog__card'
 
-    ).render();
-    new CardMenu(
-       "Фрукт1",
-        "img/card/fruits/fr1.jpg",
-        "fr1",
-        40,
-        50,
-        60,
-        70,
-        80,
-        "Фрукт1",
-        '.catalog .catalog__fruits .catalog__wrapper'
-        // 'catalog__card'
 
-    ).render();
+    axios.get('http://localhost:3000/catalog__nuts')
+        .then(data => {
+            console.log(data);
+             data.data.forEach(({ title, img, altimg, price1, price2, price3, price4, price5, subtitle }) => {
+                new CardMenu( title, img, altimg, price1, price2, price3, price4, price5, subtitle, '.catalog__fruits .catalog__wrapper').render();
+            });
+
+        }); 
+    axios.get('http://localhost:3000/catalog__fruits')
+        .then(data => {
+            console.log(data);
+             data.data.forEach(({ title, img, altimg, price1, price2, price3, price4, price5, subtitle }) => {
+                new CardMenu( title, img, altimg, price1, price2, price3, price4, price5, subtitle, '.catalog__fruits .catalog__wrapper').render();
+            });
+
+        });
+    axios.get('http://localhost:3000/catalog__chocolate')
+        .then(data => {
+            console.log(data);
+             data.data.forEach(({ title, img, altimg, price1, price2, price3, price4, price5, subtitle }) => {
+                new CardMenu(title, img, altimg, price1, price2, price3, price4, price5, subtitle, '.catalog__chocolate .catalog__wrapper').render();
+            });
+
+        });
+    
+    //slides
 
     const slides = document.querySelectorAll('.aboutUs__slider_inner-slide'),
         prevBtn = document.querySelector('.aboutUs__slider_btn-prev '),
@@ -352,9 +342,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let offset = 0,
         timer;
     
-        
-
-    
+ 
     slides.forEach(slide => {
         slide.style.width = width;
     });
@@ -425,68 +413,87 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // scrool up and smooth
+    function hideUp() {
+        up.classList.add('hide');
+        up.classList.remove('show');
+    }
+    function showUp() {
+        up.classList.add('show');
+        up.classList.remove('hide');
+    }
+    const up = document.querySelector('.pageUp');
+    up.classList.add('hide');
+    up.classList.remove('show');
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset + document.documentElement.clientHeight > 1000) {
+            showUp();
+        } else {
+            hideUp();
+        }
+    });
+    const anchors = document.querySelectorAll('a[href*="#"]');
+    for (let anchor of anchors) {
+        anchor.addEventListener('click', (e) => {
+            e.preventDefault();
+            const blockID = anchor.getAttribute('href');
+            document.querySelector('' + blockID).scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        });
+    }
 
-
-
-
-
+    // const dataItem1 = document.querySelector('[data-item1]'),
+    //     dataItem2 = document.querySelector('[data-item2]'),
+    //     dataItem3 = document.querySelector('[data-item3]'),
+    //     dataItem4 = document.querySelector('[data-item4]'),
+    //     dataItem5 = document.querySelector('[data-item5]'),
+    //     weigthPtrice = document.querySelectorAll('.price'),
+    //     price11 = document.querySelector('#price1'),
+    //     price2 = document.querySelector('#price1'),
+    //     price3 = document.querySelector('#price1'),
+    //     price4 = document.querySelector('#price1'),
+    //     price5 = document.querySelector('#price1');
+    
+    
     
    
-
-
    
-
-
-
-
-
-
-
-    // не работае
-
-    // axios.get('http://localhost:3000/catalog__fruits')
-    //     .then(data => console.log(data));
+   
+   
  
-
-
- //  data.data.forEach(({ title, img, altimg, price1, price2, price3, price4, price5, subtitle }) => {
- //                 new CardMenu( title, img, altimg, price1, price2, price3, price4, price5, subtitle, '.catalog__fruits .catalog__wrapper').render();
- //             });
-
-
-       
-    // ,
-    // {
-    //  "title": "Фрукт2",
-    //   "img": "img/card/fruits/fr2.jpg",
-    //   "altimg": "fr2",
-    //   "price1": 400,
-    //   "price2": 500,
-    //   "price3": 600,
-    //   "price4": 70,
-    //   "price5": 80,
-    //   "subtitle": "Фрукт2"
-    // },
-    // {
-    //   "title": "Фрукт3",
-    //   "img": "img/card/fruits/fr3.jpg",
-    //   "altimg": "fr3",
-    //   "price1": 500,
-    //   "price2": 700,
-    //   "price3": 900,
-    //   "price4": 70,
-    //   "price5": 80,
-    //   "subtitle": "Фрукт3"
-    // }
-
-
-    
   
     
-  
-
-    
-
+   
 
 });
+
+   
+
+
+
+    
+   
+
+
+   
+
+
+
+
+
+
+
+   
+
+    
+  
+    
+  
+
+    
+
+
+
 

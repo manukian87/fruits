@@ -121,6 +121,7 @@
             height: 70px;
         }
     }
+
      
 }
 
@@ -145,11 +146,19 @@
         }
     }
     .promo{
+        h1{
+            padding-left: 98px;
+            font-size: 48px;
+        }
+        &__descr{
+            padding-left: 117px;
+        }
         &__wrapper{
             margin-left: 0; 
-            padding-top: 163px;
+           padding-top: 141px;
         }
         .title{
+            padding-top: 0px;
             &_fz60{
                 font-size: 36px;
             }
@@ -204,6 +213,18 @@
               width: 212px;
         }
     }
+    .modal{
+        &__dialog{
+            width: 342px;
+        }
+        &__catalog{
+            padding: 20px;
+            max-width: none;
+        }
+
+    }
+  
+   
   
 
 
@@ -214,8 +235,26 @@
         max-width: 100%;
         padding: 0 10px;
     }
+    .promo{
+        h1 {
+           padding-left: 36px;
+           font-size: 30px;
+        }
+        &__descr{
+            padding-left: 7px;
+        }
+
+    }
+   
+     
     .header{
         position: relative;
+        &__phone{
+            display: block;
+            position: absolute;
+            top: 13px;
+            left: 209px;
+        }
         &__wrapper{
             nav{
                 .menu{
@@ -285,11 +324,14 @@
             }
         }
         &__wrapper{
-            grid-template-columns: 1fr;
+            grid-template-columns: 280px;
             justify-content: center;
+            &-descr{
+                font-size: 11px;
+            }
         }
         &__slider{
-            width: 550px;
+            width: 280px;
         }  
         .title {
             &_fz48 {
@@ -297,7 +339,7 @@
             }
         }
         &__slider {
-            width: 375px;
+            width: 280px;
         }
     }
     .footer{
@@ -326,15 +368,54 @@
             }
         }
     }
+    .modal {
+        &__dialog{
+           width: 337px;
+        }
+        &__title{
+            font-size: 14px;
+        }
+        &__catalog{
+            max-height: none;
+        }
+        &__input{
+            width: 202px;
+        }
+        .btn__modal{
+            width: 202px;
+        }
+       
+    }
+    .up{
+        right: 2px;
+    }
+
 }
 
 @media (max-width: 375px) {
-    &__slider {
-        width: 375px;
+    .header{
+        &__phone{
+            left: 182px;
+        }
     }
 }
 @media (max-width: 320px) {
-    &__slider {
-        width: 320px;
+   
+    .header {
+        &__phone {
+            left: 144px;
+        }
     }
+    .promo{
+        h1{
+            padding-left: 0px;
+            font-size: 30px;
+        }
+    }
+    .modal {
+        &__dialog {
+            width: 310px;
+        }
+    }
+   
 }

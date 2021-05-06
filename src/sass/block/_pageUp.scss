@@ -1,0 +1,16 @@
+.up{
+    display: block;
+    position:fixed;
+    bottom: 150px;
+    right: 40px;
+    width: 33px;
+    height: 44px;
+    z-index: 100;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+   
+        
+}

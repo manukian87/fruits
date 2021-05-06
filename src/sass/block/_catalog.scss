@@ -123,6 +123,11 @@
             margin: 10px auto;
         }
     }
-
+   .price{
+       display: none;
+       &.show{
+           display: block;
+       }
+   }
     
 }

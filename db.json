@@ -1,5 +1,97 @@
 {
-  "menu": [
+  "catalog__nuts": [
+    {
+      "title": "Фрукт1",
+      "img": "img/card/nuts/mindal.jpg",
+      "altimg": "fr1",
+      "price1": 40,
+      "price2": 50,
+      "price3": 60,
+      "price4": 70,
+      "price5": 80,
+      "subtitle": "Фрукт1"
+    },
+    {
+      "title": "Фрукт2",
+      "img": "img/card/nuts/kedrovy.jpg",
+      "altimg": "fr2",
+      "price1": 400,
+      "price2": 500,
+      "price3": 600,
+      "price4": 70,
+      "price5": 80,
+      "subtitle": "Фрукт2"
+    },
+    {
+      "title": "Фрукт3",
+      "img": "img/card/nuts/peanut.jpg",
+      "altimg": "fr3",
+      "price1": 500,
+      "price2": 700,
+      "price3": 900,
+      "price4": 70,
+      "price5": 80,
+      "subtitle": "Фрукт3"
+    },
+    {
+      "title": "Фрукт3",
+      "img": "img/card/nuts/peanut.jpg",
+      "altimg": "fr3",
+      "price1": 500,
+      "price2": 700,
+      "price3": 900,
+      "price4": 70,
+      "price5": 80,
+      "subtitle": "Фрукт3"
+    }
+  ],
+  "catalog__chocolate": [
+    {
+      "title": "шоколад1",
+      "img": "img/card/shocolad/shoc1.jpg",
+      "altimg": "fr1",
+      "price1": 40,
+      "price2": 50,
+      "price3": 60,
+      "price4": 70,
+      "price5": 80,
+      "subtitle": "Фрукт1"
+    },
+    {
+      "title": "шоколад2",
+      "img": "img/card/shocolad/shoc1.jpg",
+      "altimg": "fr2",
+      "price1": 400,
+      "price2": 500,
+      "price3": 600,
+      "price4": 70,
+      "price5": 80,
+      "subtitle": "Фрукт2"
+    },
+    {
+      "title": "шоколад3",
+      "img": "img/card/shocolad/shoc1.jpg",
+      "altimg": "fr3",
+      "price1": 500,
+      "price2": 700,
+      "price3": 900,
+      "price4": 70,
+      "price5": 80,
+      "subtitle": "Фрукт3"
+    },
+    {
+      "title": "шоколад4",
+      "img": "img/card/shocolad/shoc1.jpg",
+      "altimg": "fr3",
+      "price1": 500,
+      "price2": 700,
+      "price3": 900,
+      "price4": 70,
+      "price5": 80,
+      "subtitle": "Фрукт3"
+    }
+  ],
+  "catalog__fruits": [
     {
       "title": "Фрукт1",
       "img": "img/card/fruits/fr1.jpg",
@@ -12,7 +104,18 @@
       "subtitle": "Фрукт1"
     },
     {
-     "title": "Фрукт2",
+      "title": "Фрукт1",
+      "img": "img/card/fruits/fr1.jpg",
+      "altimg": "fr1",
+      "price1": 40,
+      "price2": 50,
+      "price3": 60,
+      "price4": 70,
+      "price5": 80,
+      "subtitle": "Фрукт1"
+    },
+    {
+      "title": "Фрукт2",
       "img": "img/card/fruits/fr2.jpg",
       "altimg": "fr2",
       "price1": 400,
@@ -35,5 +138,30 @@
     }
   ],
   "requests": [
+    {
+      "name": "Рубен",
+      "phone": "0939931464",
+      "id": 1
+    },
+    {
+      "name": "gggg",
+      "phone": "0939931464",
+      "id": 2
+    },
+    {
+      "name": "пвп",
+      "phone": "0939931464",
+      "id": 3
+    },
+    {
+      "name": "Ruben",
+      "phone": "0939931464",
+      "id": 4
+    },
+    {
+      "name": "sakanush",
+      "phone": "0939931464",
+      "id": 5
+    }
   ]
 }

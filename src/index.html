@@ -1,21 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сладости для радости</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/favicon-16x16.png">
+    <link rel="manifest" href="icons/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icons/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff"><title>Сладости и сухофрукты</title>
+<meta name="title" content="Сладости и сухофрукты">
+<meta name="description" content="Начни день с полезной сладости, и заметишь, как жизнь стала капельку солнечней и добрее">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://metatags.io/">
+<meta property="og:title" content="Сладости и сухофрукты">
+<meta property="og:description" content="Начни день с полезной сладости, и заметишь, как жизнь стала капельку солнечней и добрее">
+<meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://metatags.io/">
+<meta property="twitter:title" content="Сладости и сухофрукты">
+<meta property="twitter:description" content="Начни день с полезной сладости, и заметишь, как жизнь стала капельку солнечней и добрее">
+<meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+    <meta name="keywords" content="орехи, сухофрукты, сладости, миндал, изюм ">
     <link rel="stylesheet" href="css/style.min.css">
-    <title>Service</title>
   </head>
   <body>
     <header>
-      <div class="header"> 
+      <div class="header" id="header"> 
         <div class="header__wrapper">
-          <div class="logo"><a class="logo__link" href="#"><img src="img/logo/logo.png" alt="logo"></a></div>
+          <div class="logo"><a class="logo__link" href="#">
+              <picture> 
+                <source srcset="img/logo/logo.webp" type="image/webp"><img src="img/logo/logo.png" alt="logo">
+              </picture></a></div>
+          <div class="header__phone"> <a class="subheader__phone_call" href="tel:+380635615620"><img src="icons/contacts/phonehead.svg" alt="phone"></a></div>
           <nav> 
             <div class="menu"> 
               <ul class="menu__item title">
-                <li class="menu__link"><a href="#"> Главная</a></li>
+                <li class="menu__link"><a href="#header"> Главная</a></li>
                 <li class="menu__link"><a href="#catalog__block"> Каталог</a></li>
                 <li class="menu__link"><a href="#delivery__block"> Доставка</a></li>
                 <li class="menu__link"><a href="#aboutUs__block"> О нас</a></li>
@@ -33,9 +67,10 @@
         </div>
       </div>
     </header>
-    <section class="promo"> 
-      <div class="promo__wrapper"> 
-        <h1 class="promo__title title title_fz60">  начни день </h1>
+    <section class="promo" id="up"> 
+      <div class="promo__wrapper">
+        <h1>орехи <span>и</span> сладости </h1>
+        <h2 class="promo__title title title_fz60">  начни день </h2>
         <p class="promo__descr title title_fz48">с полезной сладости, и заметишь, как жизнь стала капельку солнечней и добрее</p>
       </div>
     </section>
@@ -50,10 +85,13 @@
         <div class="catalog__nuts" id="catalog">
           <div class="catalog__wrapper">
             <div class="catalog__card title">
-              <h3 class="catalog__card_subtitle">Миндаль</h3><img src="img/card/nuts/mindal.jpg" alt="mindal">
+              <h3 class="catalog__card_subtitle">Миндаль</h3>
+              <picture>
+                <source srcset="img/card/nuts/mindal.webp" type="image/webp"><img src="img/card/nuts/mindal.jpg" alt="mindal">
+              </picture>
               <div class="catalog__card_price title title_fz22"> 
                 <div class="catalog__card_price-title">Цена</div>
-                <div class="catalog__card_price-total"><span class="price" id="price1">100</span><span class="price" id="price2">40</span><span class="price" id="price3">50</span><span class="price" id="price4">60</span><span class="price" id="price5">30</span>
+                <div class="catalog__card_price-total"><span class="price show" id="price1">100</span><span class="price" id="price2">40</span><span class="price" id="price3">50</span><span class="price" id="price4">60</span><span class="price" id="price5">30</span>
                   <div class="catalog__card_price_descr">грн. </div>
                 </div>
               </div>
@@ -61,21 +99,24 @@
               <div class="catalog__card_weight title">
                 <div class="catalog__card_weight-title title_fz12">Вес<span>*</span></div>
                 <ul class="catalog__card_weight-wrapper">
-                  <li class="catalog__card_weight-item active-min">100 г</li>
-                  <li class="catalog__card_weight-item">200 г</li>
-                  <li class="catalog__card_weight-item">300 г</li>
-                  <li class="catalog__card_weight-item">500 г</li>
-                  <li class="catalog__card_weight-item">1000 г</li>
+                  <li class="catalog__card_weight-item active-min" data-item1> 100 г</li>
+                  <li class="catalog__card_weight-item" data-item2>200 г</li>
+                  <li class="catalog__card_weight-item" data-item3>300 г</li>
+                  <li class="catalog__card_weight-item" data-item4>500 г</li>
+                  <li class="catalog__card_weight-item" data-item5>1000 г</li>
                 </ul>
               </div>
               <div class="catalog__card_divider"></div>
               <button class="catalog__card_btn btn btn-min" data-btn>купить</button>
             </div>
             <div class="catalog__card title" id="catalog__card">
-              <h3 class="catalog__card_subtitle">Кедр</h3><img src="img/card/nuts/kedrovy.jpg" alt="kedrov">
+              <h3 class="catalog__card_subtitle">Кедр</h3>
+              <picture> 
+                <source srcset="img/card/nuts/kedrovy.webp" type="image/webp"><img src="img/card/nuts/kedrovy.jpg" alt="kedrov">
+              </picture>
               <div class="catalog__card_price title title_fz22"> 
                 <div class="catalog__card_price-title">Цена</div>
-                <div class="catalog__card_price-total"><span class="price" id="price1">10</span><span class="price">20</span><span class="price">30</span><span class="price">40</span><span class="price">50</span>
+                <div class="catalog__card_price-total"><span class="price show" id="price1">10</span><span class="price" id="price2">20</span><span class="price" id="price3">30</span><span class="price" id="price4">40</span><span class="price" id="price5">50</span>
                   <div class="catalog__card_price_descr">грн. </div>
                 </div>
               </div>
@@ -83,21 +124,24 @@
               <div class="catalog__card_weight title">
                 <div class="catalog__card_weight-title title_fz12">Вес<span>*</span></div>
                 <ul class="catalog__card_weight-wrapper">
-                  <li class="catalog__card_weight-item active-min">100 г</li>
-                  <li class="catalog__card_weight-item">200 г</li>
-                  <li class="catalog__card_weight-item">300 г</li>
-                  <li class="catalog__card_weight-item">500 г</li>
-                  <li class="catalog__card_weight-item">1000 г</li>
+                  <li class="catalog__card_weight-item active-min" data-item1>100 г</li>
+                  <li class="catalog__card_weight-item" data-item2>200 г</li>
+                  <li class="catalog__card_weight-item" data-item3>300 г</li>
+                  <li class="catalog__card_weight-item" data-item4>500 г</li>
+                  <li class="catalog__card_weight-item" data-item5>1000 г</li>
                 </ul>
               </div>
               <div class="catalog__card_divider"></div>
               <button class="catalog__card_btn btn btn-min" data-btn>купить</button>
             </div>
             <div class="catalog__card title" id="catalog__card">
-              <h3 class="catalog__card_subtitle">Арахис</h3><img src="img/card/nuts/peanut.jpg" alt="peanut">
+              <h3 class="catalog__card_subtitle">Арахис</h3>
+              <picture> 
+                <source srcset="img/card/nuts/peanut.webp" type="image/webp"><img src="img/card/nuts/peanut.jpg" alt="peanut">
+              </picture>
               <div class="catalog__card_price title title_fz22"> 
                 <div class="catalog__card_price-title">Цена</div>
-                <div class="catalog__card_price-total"><span class="price" id="price1">10</span><span class="price">20</span><span class="price">30</span><span class="price">40</span><span class="price">50</span>
+                <div class="catalog__card_price-total"><span class="price show" id="price1">10</span><span class="price">20</span><span class="price">30</span><span class="price">40</span><span class="price">50</span>
                   <div class="catalog__card_price_descr">грн. </div>
                 </div>
               </div>
@@ -105,7 +149,7 @@
               <div class="catalog__card_weight title">
                 <div class="catalog__card_weight-title title_fz12">Вес<span>*</span></div>
                 <ul class="catalog__card_weight-wrapper">
-                  <li class="catalog__card_weight-item active-min">100 г</li>
+                  <li class="catalog__card_weight-item active-min" data-item1>100 г</li>
                   <li class="catalog__card_weight-item">200 г</li>
                   <li class="catalog__card_weight-item">300 г</li>
                   <li class="catalog__card_weight-item">500 г</li>
@@ -141,99 +185,10 @@
               <div class="catalog__card_divider"></div>
               <button class="catalog__card_btn btn btn-min" data-btn>купить</button>
             </div>
-            <div class="catalog__card title">
-              <h3 class="catalog__card_subtitle">Фрукт2</h3><img src="img/card/fruits/fr2.jpg" alt="fr2">
-              <div class="catalog__card_price title title_fz22"> 
-                <div class="catalog__card_price-title">Цена</div>
-                <div class="catalog__card_price-total"><span class="price">10</span><span class="price">20</span><span class="price">30</span><span class="price">40</span><span class="price">50</span>
-                  <div class="catalog__card_price_descr">грн. </div>
-                </div>
-              </div>
-              <h4 class="catalog__card_subtitle-min title title_fz12">Фрукт2</h4>
-              <div class="catalog__card_weight title">
-                <div class="catalog__card_weight-title title_fz12">Вес<span>*</span></div>
-                <ul class="catalog__card_weight-wrapper">
-                  <li class="catalog__card_weight-item active-min">100 г</li>
-                  <li class="catalog__card_weight-item">200 г</li>
-                  <li class="catalog__card_weight-item">300 г</li>
-                  <li class="catalog__card_weight-item">500 г</li>
-                  <li class="catalog__card_weight-item">1000 г</li>
-                </ul>
-              </div>
-              <div class="catalog__card_divider"></div>
-              <button class="catalog__card_btn btn btn-min" data-btn>купить</button>
-            </div>
-            <div class="catalog__card title">
-              <h3 class="catalog__card_subtitle">Фрукт3</h3><img src="img/card/fruits/fr3.jpg" alt="fr3">
-              <div class="catalog__card_price title title_fz22"> 
-                <div class="catalog__card_price-title">Цена</div>
-                <div class="catalog__card_price-total"><span class="price">10</span><span class="price">20</span><span class="price">30</span><span class="price">40</span><span class="price">50</span>
-                  <div class="catalog__card_price_descr">грн. </div>
-                </div>
-              </div>
-              <h4 class="catalog__card_subtitle-min title title_fz12">Фрукт3</h4>
-              <div class="catalog__card_weight title">
-                <div class="catalog__card_weight-title title_fz12">Вес<span>*</span></div>
-                <ul class="catalog__card_weight-wrapper">
-                  <li class="catalog__card_weight-item active-min">100 г</li>
-                  <li class="catalog__card_weight-item">200 г</li>
-                  <li class="catalog__card_weight-item">300 г</li>
-                  <li class="catalog__card_weight-item">500 г</li>
-                  <li class="catalog__card_weight-item">1000 г</li>
-                </ul>
-              </div>
-              <div class="catalog__card_divider"></div>
-              <button class="catalog__card_btn btn btn-min" data-btn>купить</button>
-            </div>
-            <div class="catalog__card title">
-              <h3 class="catalog__card_subtitle">Фрукт3</h3><img src="img/card/fruits/fr3.jpg" alt="fr3">
-              <div class="catalog__card_price title title_fz22"> 
-                <div class="catalog__card_price-title">Цена</div>
-                <div class="catalog__card_price-total"><span class="price">10</span><span class="price">20</span><span class="price">30</span><span class="price">40</span><span class="price">50</span>
-                  <div class="catalog__card_price_descr">грн. </div>
-                </div>
-              </div>
-              <h4 class="catalog__card_subtitle-min title title_fz12">Фрукт3</h4>
-              <div class="catalog__card_weight title">
-                <div class="catalog__card_weight-title title_fz12">Вес<span>*</span></div>
-                <ul class="catalog__card_weight-wrapper">
-                  <li class="catalog__card_weight-item active-min">100 г</li>
-                  <li class="catalog__card_weight-item">200 г</li>
-                  <li class="catalog__card_weight-item">300 г</li>
-                  <li class="catalog__card_weight-item">500 г</li>
-                  <li class="catalog__card_weight-item">1000 г</li>
-                </ul>
-              </div>
-              <div class="catalog__card_divider"></div>
-              <button class="catalog__card_btn btn btn-min" data-btn>купить</button>
-            </div>
           </div>
         </div>
         <div class="catalog__chocolate" id="catalog">
-          <div class="catalog__wrapper">
-            <div class="catalog__card title">
-              <h3 class="catalog__card_subtitle">Шоколад</h3><img src="img/card/shocolad/shoc1.jpg" alt="shocolad">
-              <div class="catalog__card_price title title_fz22"> 
-                <div class="catalog__card_price-title">Цена</div>
-                <div class="catalog__card_price-total"><span class="price">10</span><span class="price">20</span><span class="price">30</span><span class="price">40</span><span class="price">500</span>
-                  <div class="catalog__card_price_descr">грн. </div>
-                </div>
-              </div>
-              <h4 class="catalog__card_subtitle-min title title_fz12">Шоколад </h4>
-              <div class="catalog__card_weight title">
-                <div class="catalog__card_weight-title title_fz12">Вес<span>*</span></div>
-                <ul class="catalog__card_weight-wrapper">
-                  <li class="catalog__card_weight-item active-min">100 г</li>
-                  <li class="catalog__card_weight-item">200 г</li>
-                  <li class="catalog__card_weight-item">300 г</li>
-                  <li class="catalog__card_weight-item">500 г</li>
-                  <li class="catalog__card_weight-item">1000 г</li>
-                </ul>
-              </div>
-              <div class="catalog__card_divider"></div>
-              <button class="catalog__card_btn btn btn-min" data-btn>купить</button>
-            </div>
-          </div>
+          <div class="catalog__wrapper"></div>
         </div>
       </div>
     </section>
@@ -254,9 +209,21 @@
             </div>
             <div class="aboutUs__slider_wrapper">
               <div class="aboutUs__slider_inner">
-                <div class="aboutUs__slider_inner-slide"><img src="img/slide/assorti3.jpg" alt="assorti3"></div>
-                <div class="aboutUs__slider_inner-slide"><img src="img/slide/chocolad.jpg" alt="chocolad"></div>
-                <div class="aboutUs__slider_inner-slide"><img src="img/slide/fruct.jpg" alt="fruct"></div>
+                <div class="aboutUs__slider_inner-slide">
+                  <picture> 
+                    <source srcset="img/slide/assorti3.webp" type="image/webp"><img src="img/slide/assorti3.jpg" alt="assorti3">
+                  </picture>
+                </div>
+                <div class="aboutUs__slider_inner-slide">
+                  <picture> 
+                    <source srcset="img/slide/chocolad.webp" type="image/webp"><img src="img/slide/chocolad.jpg" alt="chocolad">
+                  </picture>
+                </div>
+                <div class="aboutUs__slider_inner-slide">
+                  <picture> 
+                    <source srcset="img/slide/fruct.webp" type="image/webp"><img src="img/slide/fruct.jpg" alt="fruct">
+                  </picture>
+                </div>
               </div>
             </div>
           </div>
@@ -266,7 +233,11 @@
     <section class="delivery" id="delivery__block"> 
       <div class="container"> 
         <h2 class="delivery__title title title_fz48">Доставка </h2>
-        <div class="delivery__icons"><img src="icons/delivery/dostavka.png" alt="delivery"></div>
+        <div class="delivery__icons">
+          <picture>
+            <source srcset="icons/delivery/dostavka.webp" type="image/webp"><img src="icons/delivery/dostavka.png" alt="delivery">
+          </picture>
+        </div>
         <h3 class="delivery__descr title title_fz24">Доставим сухофрукты и орехы быстро и качественно</h3>
         <div class="divider"> </div>
         <p class="delivery__descr-text info title title_fz16">Нам очень Важно, чтобы нашим Клиентам было максимально удобно совершать покупку у нас в нашем магазине "Орехи и Сладости". Мы предлагаем Вам приятные цены и качественную доставку. Все, что нужно сделать, это: </p>
@@ -274,6 +245,19 @@
           <li class="delivery__info-text">Сделать заказ на сайте www.......m, позвонить по номеру 8 (063) 561-56-20, написать на почту serpentel83@gmail.com или связаться с нами через любой мессенджер: WatsApp и Viber, которые привязаны к номеру телефона 8 (063) 561-56-20.</li>
           <li class="delivery__info-text">В назначенное время встретиться с нашим представителем в удобном для вас месте. Оплатить заказ наличными или по карте курьеру.  </li>
         </ol>
+      </div>
+    </section>
+    <section class="modal"> 
+      <div class="modal__dialog">
+        <div class="modal__catalog"> 
+          <form action="#">
+            <div class="modal__close" data-close>  &times;</div>
+            <div class="modal__title">  Мы свяжемся с вами как можно быстрее!</div>
+            <input class="modal__input" required placeholder="Ваше имя" name="name" type="text">
+            <input class="modal__input" required placeholder="Ваш номер телефона" name="phone" type="phone">
+            <button class="btn btn__modal" data-btn>Перезвонить мне</button>
+          </form>
+        </div>
       </div>
     </section>
     <section class="footer"> 
@@ -296,6 +280,7 @@
         </div>
       </div>
     </section>
+    <section class="up"> <a class="pageUp" href="#up"><img src="icons/up/up.svg" alt="up"></a></section>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/main.js"> </script>
   </body>
