@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сладости для радости</title>
     <link rel="apple-touch-icon" sizes="57x57" href="icons/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="icons/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="icons/favicon/apple-icon-72x72.png">
@@ -21,19 +20,20 @@
     <link rel="manifest" href="icons/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="icons/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff"><title>Сладости и сухофрукты</title>
-<meta name="title" content="Сладости и сухофрукты">
-<meta name="description" content="Начни день с полезной сладости, и заметишь, как жизнь стала капельку солнечней и добрее">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://metatags.io/">
-<meta property="og:title" content="Сладости и сухофрукты">
-<meta property="og:description" content="Начни день с полезной сладости, и заметишь, как жизнь стала капельку солнечней и добрее">
-<meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://metatags.io/">
-<meta property="twitter:title" content="Сладости и сухофрукты">
-<meta property="twitter:description" content="Начни день с полезной сладости, и заметишь, как жизнь стала капельку солнечней и добрее">
-<meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Сладости для радости</title>
+    <meta name="title" content="Сладости и сухофрукты">
+    <meta name="description" content="Начни день с полезной сладости, и заметишь, как жизнь стала капельку солнечней и добрее">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://manukian87.github.io/nuts/">
+    <meta property="og:title" content="Сладости и сухофрукты">
+    <meta property="og:description" content="Начни день с полезной сладости, и заметишь, как жизнь стала капельку солнечней и добрее">
+    <meta property="og:image" content="https://manukian87.github.io/nuts/img/logo/logo.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://manukian87.github.io/nuts/">
+    <meta property="twitter:title" content="Сладости и сухофрукты">
+    <meta property="twitter:description" content="Начни день с полезной сладости, и заметишь, как жизнь стала капельку солнечней и добрее">
+    <meta property="twitter:image" content="https://manukian87.github.io/nuts/img/logo/logo.png">
     <meta name="keywords" content="орехи, сухофрукты, сладости, миндал, изюм ">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -41,10 +41,23 @@
     <header>
       <div class="header" id="header"> 
         <div class="header__wrapper">
-          <div class="logo"><a class="logo__link" href="#">
+          <div class="logo"><a class="logo__link" href="#header">
               <picture> 
                 <source srcset="img/logo/logo.webp" type="image/webp"><img src="img/logo/logo.png" alt="logo">
               </picture></a></div>
+          <div class="header__catalog">
+            <div class="header__catalog-btn">
+              <h6>Каталог</h6>
+              <div class="header__catalog-img"> <img src="icons/catalog/cart-solid.svg" alt="catalog"></div>
+            </div>
+            <ul class="header__catalog-item hide">
+              <li class="header__catalog-link"><a href="#catalog__block">Орехи</a></li>
+              <li class="header__catalog-link"><a href="#catalog__block">Сухофрукты</a></li>
+              <li class="header__catalog-link"><a href="#catalog__block">Шоколад</a></li>
+              <li class="header__catalog-link"><a href="#catalog__block">Подарочные наборы</a></li>
+              <li class="header__catalog-link"><a href="#catalog__block">Печенье</a></li>
+            </ul>
+          </div>
           <div class="header__phone"> <a class="subheader__phone_call" href="tel:+380635615620"><img src="icons/contacts/phonehead.svg" alt="phone"></a></div>
           <nav> 
             <div class="menu"> 
@@ -60,9 +73,7 @@
           </nav>
           <div class="subheader title"> 
             <div class="subheader__phone"> <a class="subheader__phone_call" href="tel:+380635615620">  (063)-561-56-20</a></div>
-            <button class="subheader__btn btn" data-btn> 
-              <div class="subheader__btn_text">Заказать звонок  </div>
-            </button>
+            <button class="subheader__btn btn subheader__btn_text" data-btn> Заказать звонок          </button>
           </div>
         </div>
       </div>
@@ -82,7 +93,7 @@
         <li class="catalog__tabs_item">шоколад</li>
       </ul>
       <div class="container">
-        <div class="catalog__nuts" id="catalog">
+        <div class="catalog__nuts catalog__card-item" id="catalog__nuts">
           <div class="catalog__wrapper">
             <div class="catalog__card title">
               <h3 class="catalog__card_subtitle">Миндаль</h3>
@@ -91,7 +102,7 @@
               </picture>
               <div class="catalog__card_price title title_fz22"> 
                 <div class="catalog__card_price-title">Цена</div>
-                <div class="catalog__card_price-total"><span class="price show" id="price1">100</span><span class="price" id="price2">40</span><span class="price" id="price3">50</span><span class="price" id="price4">60</span><span class="price" id="price5">30</span>
+                <div class="catalog__card_price-total"><span class="price show">100</span><span class="price">40</span><span class="price">50</span><span class="price">60</span><span class="price">30</span>
                   <div class="catalog__card_price_descr">грн. </div>
                 </div>
               </div>
@@ -109,14 +120,14 @@
               <div class="catalog__card_divider"></div>
               <button class="catalog__card_btn btn btn-min" data-btn>купить</button>
             </div>
-            <div class="catalog__card title" id="catalog__card">
+            <div class="catalog__card title"> 
               <h3 class="catalog__card_subtitle">Кедр</h3>
               <picture> 
                 <source srcset="img/card/nuts/kedrovy.webp" type="image/webp"><img src="img/card/nuts/kedrovy.jpg" alt="kedrov">
               </picture>
               <div class="catalog__card_price title title_fz22"> 
                 <div class="catalog__card_price-title">Цена</div>
-                <div class="catalog__card_price-total"><span class="price show" id="price1">10</span><span class="price" id="price2">20</span><span class="price" id="price3">30</span><span class="price" id="price4">40</span><span class="price" id="price5">50</span>
+                <div class="catalog__card_price-total"><span class="price show">10</span><span class="price">20</span><span class="price">30</span><span class="price">40</span><span class="price">50</span>
                   <div class="catalog__card_price_descr">грн. </div>
                 </div>
               </div>
@@ -134,14 +145,14 @@
               <div class="catalog__card_divider"></div>
               <button class="catalog__card_btn btn btn-min" data-btn>купить</button>
             </div>
-            <div class="catalog__card title" id="catalog__card">
+            <div class="catalog__card title">
               <h3 class="catalog__card_subtitle">Арахис</h3>
               <picture> 
                 <source srcset="img/card/nuts/peanut.webp" type="image/webp"><img src="img/card/nuts/peanut.jpg" alt="peanut">
               </picture>
               <div class="catalog__card_price title title_fz22"> 
                 <div class="catalog__card_price-title">Цена</div>
-                <div class="catalog__card_price-total"><span class="price show" id="price1">10</span><span class="price">20</span><span class="price">30</span><span class="price">40</span><span class="price">50</span>
+                <div class="catalog__card_price-total"><span class="price show">10</span><span class="price">20</span><span class="price">30</span><span class="price">40</span><span class="price">50</span>
                   <div class="catalog__card_price_descr">грн. </div>
                 </div>
               </div>
@@ -161,7 +172,7 @@
             </div>
           </div>
         </div>
-        <div class="catalog__fruits" id="catalog">
+        <div class="catalog__fruits catalog__card-item" id="catalog__fruits">
           <div class="catalog__wrapper">
             <div class="catalog__card title">
               <h3 class="catalog__card_subtitle">Фрукт1</h3><img src="img/card/fruits/fr1.jpg" alt="fr1">
@@ -187,7 +198,13 @@
             </div>
           </div>
         </div>
-        <div class="catalog__chocolate" id="catalog">
+        <div class="catalog__chocolate catalog__card-item" id="catalog__chocolate">
+          <div class="catalog__wrapper"></div>
+        </div>
+        <div class="catalog__presets catalog__card-item" id="catalog__presets">
+          <div class="catalog__wrapper"></div>
+        </div>
+        <div class="catalog__biscuit catalog__card-item" id="catalog__biscuit">
           <div class="catalog__wrapper"></div>
         </div>
       </div>
@@ -252,9 +269,9 @@
         <div class="modal__catalog"> 
           <form action="#">
             <div class="modal__close" data-close>  &times;</div>
-            <div class="modal__title">  Мы свяжемся с вами как можно быстрее!</div>
+            <h5 class="modal__title"> Мы свяжемся с вами как можно быстрее!</h5>
             <input class="modal__input" required placeholder="Ваше имя" name="name" type="text">
-            <input class="modal__input" required placeholder="Ваш номер телефона" name="phone" type="phone">
+            <input class="modal__input" required placeholder="Ваш номер телефона" name="phone" type="tel">
             <button class="btn btn__modal" data-btn>Перезвонить мне</button>
           </form>
         </div>
@@ -267,15 +284,15 @@
             <div class="footer__social-fb"><a href="#"><img src="icons/social/facebook-brands.svg" alt="fk"></a></div>
           </div>
           <div class="fc">
-            <div class="footer__social-tg"><a href="#"><img src="icons/social/telegram.svg" alt="tg"></a></div>
+            <div class="footer__social-tg"><a href="#"><img src="icons/social/telegram-brands.svg" alt="tg"></a></div>
           </div>
           <div class="fc">
-            <div class="footer__social-inst"><a href="#"><img src="icons/social/instagram.svg" alt="inst"></a></div>
+            <div class="footer__social-inst"><a href="#"><img src="icons/social/instagram-brands.svg" alt="inst"></a></div>
           </div>
         </div>
-        <div class="footer__logo"> <a href="#"><img src="img/logo/logo.png" alt="logo"></a></div>
+        <div class="footer__logo"> <a href="#header"><img src="img/logo/logo.png" alt="logo"></a></div>
         <div class="footer__contact" id="contact__block"> 
-          <div class="footer__contact-tel"><a href="tel:+380635615620">+38(063)561-56-20<img src="icons/contacts/phone.svg" alt="vib"></a></div>
+          <h4 class="footer__contact-tel"><a href="tel:+380635615620">+38(063)561-56-20<img src="icons/contacts/phone.svg" alt="vib"></a></h4>
           <div class="footer__contact-email"><a href="mailto:serpentel83@gmail.com">serpentel83@gmail.com</a><img src="icons/contacts/mail4.svg" alt="@"></div>
         </div>
       </div>

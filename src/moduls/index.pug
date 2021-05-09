@@ -8,10 +8,21 @@ block   content
         .header#header 
             .header__wrapper
                 .logo
-                    a(href="#").logo__link
+                    a(href="#header").logo__link
                         picture 
                             source(srcset="img/logo/logo.webp" type="image/webp")
                             img(src="img/logo/logo.png", alt="logo")
+                .header__catalog
+                    .header__catalog-btn
+                        h6 Каталог
+                        .header__catalog-img 
+                            img(src="icons/catalog/cart-solid.svg", alt="catalog")
+                    ul.header__catalog-item.hide
+                        li.header__catalog-link: a(href="#catalog__block") Орехи
+                        li.header__catalog-link: a(href="#catalog__block") Сухофрукты
+                        li.header__catalog-link: a(href="#catalog__block") Шоколад
+                        li.header__catalog-link: a(href="#catalog__block") Подарочные наборы
+                        li.header__catalog-link: a(href="#catalog__block") Печенье
                 .header__phone 
                      a(href="tel:+380635615620" class="subheader__phone_call"): img(src="icons/contacts/phonehead.svg", alt="phone")
                 nav 
@@ -29,8 +40,7 @@ block   content
                 .subheader.title 
                     .subheader__phone 
                         a(href="tel:+380635615620" class="subheader__phone_call")   (063)-561-56-20
-                    button.subheader__btn.btn(data-btn) 
-                        .subheader__btn_text Заказать звонок  
+                    button.subheader__btn.btn(data-btn).subheader__btn_text  Заказать звонок          
     section.promo#up 
             .promo__wrapper
                 h1 орехи <span>и</span> сладости 
@@ -44,7 +54,7 @@ block   content
             li.catalog__tabs_item Сухофрукты 
             li.catalog__tabs_item шоколад
         .container
-            .catalog__nuts#catalog
+            .catalog__nuts.catalog__card-item#catalog__nuts
                 .catalog__wrapper
                     .catalog__card.title
                         h3.catalog__card_subtitle Миндаль
@@ -54,11 +64,11 @@ block   content
                         .catalog__card_price.title.title_fz22 
                             .catalog__card_price-title Цена
                             .catalog__card_price-total
-                                span.price#price1.show 100
-                                span.price#price2 40
-                                span.price#price3 50
-                                span.price#price4 60
-                                span.price#price5 30
+                                span.price.show 100
+                                span.price 40
+                                span.price 50
+                                span.price 60
+                                span.price 30
                                 .catalog__card_price_descr грн. 
                         h4.catalog__card_subtitle-min.title.title_fz12 Миндаль
                         .catalog__card_weight.title
@@ -72,7 +82,7 @@ block   content
                                 li.catalog__card_weight-item(data-item5) 1000 г
                         .catalog__card_divider
                         button.catalog__card_btn.btn.btn-min(data-btn) купить
-                    .catalog__card.title#catalog__card
+                    .catalog__card.title 
                         h3.catalog__card_subtitle Кедр
                         picture 
                             source(srcset="img/card/nuts/kedrovy.webp" type="image/webp")
@@ -80,11 +90,11 @@ block   content
                         .catalog__card_price.title.title_fz22 
                             .catalog__card_price-title Цена
                             .catalog__card_price-total
-                                span.price#price1.show 10
-                                span.price#price2 20
-                                span.price#price3 30
-                                span.price#price4 40
-                                span.price#price5 50
+                                span.price.show 10
+                                span.price 20
+                                span.price 30
+                                span.price 40
+                                span.price 50
                                 .catalog__card_price_descr грн. 
                         h4.catalog__card_subtitle-min.title.title_fz12 Кедр
                         .catalog__card_weight.title
@@ -98,7 +108,7 @@ block   content
                                 li.catalog__card_weight-item(data-item5) 1000 г
                         .catalog__card_divider
                         button.catalog__card_btn.btn.btn-min(data-btn) купить
-                    .catalog__card.title#catalog__card
+                    .catalog__card.title
                         h3.catalog__card_subtitle Арахис
                         picture 
                             source(srcset="img/card/nuts/peanut.webp" type="image/webp")
@@ -106,7 +116,7 @@ block   content
                         .catalog__card_price.title.title_fz22 
                             .catalog__card_price-title Цена
                             .catalog__card_price-total
-                                span.price#price1.show 10
+                                span.price.show 10
                                 span.price 20
                                 span.price 30
                                 span.price 40
@@ -124,7 +134,7 @@ block   content
                                 li.catalog__card_weight-item 1000 г
                         .catalog__card_divider
                         button.catalog__card_btn.btn.btn-min(data-btn) купить
-            .catalog__fruits#catalog
+            .catalog__fruits.catalog__card-item#catalog__fruits
                 .catalog__wrapper
                     .catalog__card.title
                         h3.catalog__card_subtitle Фрукт1
@@ -251,7 +261,7 @@ block   content
                     //-             li.catalog__card_weight-item 1000 г
                     //-     .catalog__card_divider
                     //-     button.catalog__card_btn.btn.btn-min(data-btn) купить
-            .catalog__chocolate#catalog
+            .catalog__chocolate.catalog__card-item#catalog__chocolate
                 .catalog__wrapper
                     //- .catalog__card.title
                     //-     h3.catalog__card_subtitle Шоколад
@@ -277,6 +287,10 @@ block   content
                     //-             li.catalog__card_weight-item 1000 г
                     //-     .catalog__card_divider
                     //-     button.catalog__card_btn.btn.btn-min(data-btn) купить
+            .catalog__presets.catalog__card-item#catalog__presets
+                .catalog__wrapper
+            .catalog__biscuit.catalog__card-item#catalog__biscuit
+                .catalog__wrapper
     section.aboutUs#aboutUs__block 
         .container
             h2.aboutUs__title.title.title_fz48 ПОЛЕЗНЫЕ СЛАДОСТИ <span>ИЛИ</span> НЕМНОГО О СУХОФРУКТАХ
@@ -323,9 +337,9 @@ block   content
             .modal__catalog 
                 form(action="#")
                     .modal__close(data-close)   &times;
-                    .modal__title   Мы свяжемся с вами как можно быстрее!
+                    h5.modal__title  Мы свяжемся с вами как можно быстрее!
                     input(required placeholder="Ваше имя" name="name" type="text" class="modal__input")
-                    input(required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input")
+                    input(required placeholder="Ваш номер телефона" name="phone" type="tel" class="modal__input")
                     button.btn.btn__modal(data-btn) Перезвонить мне
     section.footer 
         .footer__wrapper 
@@ -333,13 +347,13 @@ block   content
                 .fc
                     .footer__social-fb: a(href="#"): img(src="icons/social/facebook-brands.svg", alt="fk")
                 .fc
-                    .footer__social-tg: a(href="#"): img(src="icons/social/telegram.svg", alt="tg")
+                    .footer__social-tg: a(href="#"): img(src="icons/social/telegram-brands.svg", alt="tg")
                 .fc
-                    .footer__social-inst: a(href="#"): img(src="icons/social/instagram.svg", alt="inst")
+                    .footer__social-inst: a(href="#"): img(src="icons/social/instagram-brands.svg", alt="inst")
             .footer__logo 
-                a(href="#"): img(src="img/logo/logo.png", alt="logo")  
+                a(href="#header"): img(src="img/logo/logo.png", alt="logo")  
             .footer__contact#contact__block 
-                .footer__contact-tel
+                h4.footer__contact-tel
                     a(href="tel:+380635615620") +38(063)561-56-20
                         img(src="icons/contacts/phone.svg", alt="vib")
                 .footer__contact-email

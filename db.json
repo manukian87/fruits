@@ -4,6 +4,17 @@
       "title": "Фрукт1",
       "img": "img/card/nuts/mindal.jpg",
       "altimg": "fr1",
+      "price1": 4000,
+      "price2": 50,
+      "price3": 60,
+      "price4": 70,
+      "price5": 80,
+      "subtitle": "Фрукт1"
+    },
+    {
+      "title": "Фрукт1",
+      "img": "img/card/nuts/mindal.jpg",
+      "altimg": "fr1",
       "price1": 40,
       "price2": 50,
       "price3": 60,
@@ -81,6 +92,17 @@
     },
     {
       "title": "шоколад4",
+      "img": "img/card/shocolad/shoc1.jpg",
+      "altimg": "fr3",
+      "price1": 500,
+      "price2": 700,
+      "price3": 900,
+      "price4": 70,
+      "price5": 80,
+      "subtitle": "Фрукт3"
+    },
+    {
+      "title": "шоколад5",
       "img": "img/card/shocolad/shoc1.jpg",
       "altimg": "fr3",
       "price1": 500,

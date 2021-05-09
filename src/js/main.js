@@ -1,17 +1,14 @@
 window.addEventListener('DOMContentLoaded', () => {
-     //tabs
+    //tabs
 
     const tabsWrapper = document.querySelector('.catalog__tabs'),
         tabs = document.querySelectorAll('.catalog__tabs_item'),
-        content = document.querySelectorAll('#catalog'),
-        weightWrapper = document.querySelectorAll('.catalog__card_weight-wrapper'),
+        content = document.querySelectorAll('.catalog__card-item'),
+        nuts = document.querySelectorAll('.catalog__card');
+    let tabweigth = document.querySelectorAll('.catalog__card_weight-item'),
         price = document.querySelectorAll('.price'),
-        weigth = document.querySelectorAll('.catalog__card_weight-item'),
-        nuts = document.querySelectorAll('.catalog__card'),
-        price1 = document.querySelector('#price1');
+        weightWrapper = document.querySelectorAll('.catalog__card_weight-wrapper');
         
-    
-     
     function hideMenu(item) {
         item.classList.add('hide');
         item.classList.remove('show', 'fade');
@@ -22,14 +19,15 @@ window.addEventListener('DOMContentLoaded', () => {
         item[i].classList.add('show', 'fade');
         item[i].classList.remove('hide');
     }
+    function showClass(item) {
+        item.classList.add('show', 'fade');
+        item.classList.remove('hide');
+    }
 
 
     function hideContent() {
-        tabs.forEach(tab => {
-            tab.classList.remove('active');
-
-        });
-        content.forEach(item =>  hideMenu(item));
+        tabs.forEach(tab => tab.classList.remove('active'));
+        content.forEach(item => hideMenu(item));
 
     }
   
@@ -55,93 +53,69 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
-   // show price
+    // show price
  
   
     function hidePrice() {
-        weigth.forEach((item) => {
-            item.classList.remove('active-min');
-            
-        });
-
+        tabweigth.forEach(item => item.classList.remove('active-min'));
         price.forEach(item => hideMenu(item));
-     
-            
-        
-        // price.forEach(item => {
-        //     item.classList.add('hide');
-        //     item.classList.remove('show');
-        // });
-       
-
     }
-       
-
-    //  activeBtnWeight.classList.add('active-min');
-
     function showPrice(i = 0) {
-        weigth[i].classList.add('active-min');
-        // price[i].classList.add('show');
-        // price[i].classList.remove('hide');
-  
+        price = document.querySelectorAll('.price');
+        tabweigth[i].classList.add('active-min');
         showMenu(price, i);
-       
-         
-        
+
     }
    
     
     hidePrice();
     showPrice();
-
-    weightWrapper.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            if (e.target && e.target.classList.contains('catalog__card_weight-item')) {
-                weigth.forEach((item, i) => {
-                    if (item == e.target) {
-                        price.forEach(item => hideMenu(item));
-                        hidePrice();
-                        showPrice(i);
-                        
-                    
-                        
-                    }
-                });
-            }
-        });
-       
-    });
-
-
     
-   
+    document.addEventListener('click', function (event) {
+        const target = event.target;
+        if (target && target.classList.contains('catalog__card_weight-item')) {
+            tabweigth = document.querySelectorAll('.catalog__card_weight-item');
+            tabweigth.forEach((item, i) => {
+                if (target == item) {
+                    hidePrice();
+                    showPrice(i);
+                    
+                }
+            });
+        }
+    });
+        
 
     //modal
-    const modalTrigger = document.querySelectorAll('[data-btn]'),
-          modalClose = document.querySelector('[data-close]'),
-          modal = document.querySelector('.modal');
     
+    const modalClose = document.querySelector('[data-close]'),
+          modal = document.querySelector('.modal');
+    let   modalTrigger = document.querySelectorAll('[data-btn]');
+
+  
     
     function showModal() {
-        modal.classList.add('show','fade');
-        modal.classList.remove('hide');
-        //  modal.classList.toggle('show');
+        showClass(modal);
         document.body.style.overflow = 'hidden';
         clearInterval(modalTimer);
     }
 
     function closeModal() {
-        modal.classList.add('hide');
-        modal.classList.remove('show', 'fade');
-        //  modal.classList.toggle('show');
+        hideMenu(modal);
         document.body.style.overflow = '';
     }
-    
-    modalTrigger.forEach(btn => {
-        btn.addEventListener('click', showModal);
+      
+    window.addEventListener('click', function (event) {
+        const target = event.target;
+        if (target && target.getAttribute('data-btn') == '') {
+            modalTrigger = document.querySelectorAll('[data-btn]');
+            modalTrigger.forEach(btn => {
+                btn.addEventListener('click', showModal);
+            });
+        }
+      
     });
-
-
+    
     modalClose.addEventListener('click', closeModal);
 
     modal.addEventListener('click', (e) => {
@@ -157,7 +131,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     // modalTimer
-      const modalTimer = setTimeout(showModal, 40000);
+    const modalTimer = setTimeout(showModal, 4000);
 
     
     function showModalByScroll() {
@@ -212,11 +186,11 @@ window.addEventListener('DOMContentLoaded', () => {
                     statusMessage.remove();
                 })
                 .catch(() => {
-                        showThanksModal(message.failure);
-                    })
+                    showThanksModal(message.failure);
+                })
                 .finally(() => {
-                        form.reset();
-                    });
+                    form.reset();
+                });
             
         });
     }
@@ -240,13 +214,13 @@ window.addEventListener('DOMContentLoaded', () => {
             prevThanksDialog.classList.add('show');
             prevThanksDialog.classList.remove('hide');
             closeModal();
-        },4000);
+        }, 3000);
 
     }
 
     // CardMenu
 
-        class CardMenu{
+    class CardMenu {
         constructor(title, src, alt, price1, price2, price3, price4, price5, subtitle, parentSelector, ...classes) {
             this.title = title;
             this.src = src;
@@ -266,7 +240,6 @@ window.addEventListener('DOMContentLoaded', () => {
             const element = document.createElement('div');
             if (this.classes.length === 0) {
                 element.classList.add('catalog__card', 'title');
-                // element.classList.add('title');
             } else {
                 this.classes.forEach(className => element.classList.add(className));
             }
@@ -276,11 +249,11 @@ window.addEventListener('DOMContentLoaded', () => {
                 <div class="catalog__card_price title title_fz22"> 
                     <div class="catalog__card_price-title">Цена</div>
                     <div class="catalog__card_price-total">
-                        <span class="price show" id="price1">${this.price1}</span>
-                        <span class="price hide" id="price2">${this.price2}</span>
-                        <span class="price hide" id="price3">${this.price3}</span>
-                        <span class="price hide" id="price4">${this.price4}</span>
-                        <span class="price hide" id="price5">${this.price5}</span>
+                        <span class="price show">${this.price1}</span>
+                        <span class="price hide">${this.price2}</span>
+                        <span class="price hide">${this.price3}</span>
+                        <span class="price hide">${this.price4}</span>
+                        <span class="price hide">${this.price5}</span>
                         <div class="catalog__card_price_descr">грн. </div>
                     </div>
 
@@ -308,23 +281,23 @@ window.addEventListener('DOMContentLoaded', () => {
     axios.get('http://localhost:3000/catalog__nuts')
         .then(data => {
             console.log(data);
-             data.data.forEach(({ title, img, altimg, price1, price2, price3, price4, price5, subtitle }) => {
-                new CardMenu( title, img, altimg, price1, price2, price3, price4, price5, subtitle, '.catalog__fruits .catalog__wrapper').render();
+            data.data.forEach(({ title, img, altimg, price1, price2, price3, price4, price5, subtitle }) => {
+                new CardMenu(title, img, altimg, price1, price2, price3, price4, price5, subtitle, '.catalog__fruits .catalog__wrapper').render();
             });
 
-        }); 
+        });
     axios.get('http://localhost:3000/catalog__fruits')
         .then(data => {
             console.log(data);
-             data.data.forEach(({ title, img, altimg, price1, price2, price3, price4, price5, subtitle }) => {
-                new CardMenu( title, img, altimg, price1, price2, price3, price4, price5, subtitle, '.catalog__fruits .catalog__wrapper').render();
+            data.data.forEach(({ title, img, altimg, price1, price2, price3, price4, price5, subtitle }) => {
+                new CardMenu(title, img, altimg, price1, price2, price3, price4, price5, subtitle, '.catalog__fruits .catalog__wrapper').render();
             });
 
         });
     axios.get('http://localhost:3000/catalog__chocolate')
         .then(data => {
             console.log(data);
-             data.data.forEach(({ title, img, altimg, price1, price2, price3, price4, price5, subtitle }) => {
+            data.data.forEach(({ title, img, altimg, price1, price2, price3, price4, price5, subtitle }) => {
                 new CardMenu(title, img, altimg, price1, price2, price3, price4, price5, subtitle, '.catalog__chocolate .catalog__wrapper').render();
             });
 
@@ -338,45 +311,37 @@ window.addEventListener('DOMContentLoaded', () => {
         sliderInner = document.querySelector('.aboutUs__slider_inner'),
         sliderWrapper = document.querySelector('.aboutUs__slider_wrapper'),
         width = window.getComputedStyle(sliderWrapper).width;
+        
     
     let offset = 0,
-        timer;
+        timer,
+        offsetWidth = +width.slice(0, width.length - 2);
     
- 
-    slides.forEach(slide => {
-        slide.style.width = width;
-    });
+
+    slides.forEach(slide => slide.style.width = width);
     sliderInner.style.width = 100 * slides.length + '%';
     sliderWrapper.style.overflow = 'hidden';
+
+    const sliderInnerOffset = () => sliderInner.style.transform = `translateX(-${offset}px)`;
 
     AutoSlide();
     function AutoSlide() {
         timer = setTimeout(nextSlid, 3000);
     }
-
-    function nextSlid() {
-        if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
-            offset = 0;
-        } else {
-            offset += +width.slice(0, width.length - 2);
-        }
-
-        sliderInner.style.transform = `translateX(-${offset}px)`;
-        AutoSlide();
-    }
-    nextSlid();
-
     
 
-        
-    nexBtn.addEventListener('click', () => {
-        if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
+    function nextSlid() {
+        if (offset == offsetWidth * (slides.length - 1)) {
             offset = 0;
         } else {
-            offset += +width.slice(0, width.length - 2);
+            offset += offsetWidth;
         }
+        sliderInnerOffset();
+        AutoSlide();
+    }
 
-        sliderInner.style.transform = `translateX(-${offset}px)`;
+    nexBtn.addEventListener('click', () => {
+        nextSlid();
         clearInterval(AutoSlide);
     });
   
@@ -384,11 +349,11 @@ window.addEventListener('DOMContentLoaded', () => {
     
     prevBtn.addEventListener('click', () => {
         if (offset === 0) {
-            offset = +width.slice(0, width.length - 2) * (slides.length - 1);
+            offset = offsetWidth * (slides.length - 1);
         } else {
-            offset -= +width.slice(0, width.length - 2);
+            offset -= offsetWidth;
         }
-        sliderInner.style.transform = `translateX(-${offset}px)`;
+        sliderInnerOffset();
         clearInterval(AutoSlide);
 
     });
@@ -403,9 +368,7 @@ window.addEventListener('DOMContentLoaded', () => {
         humburger.classList.toggle(act);
     };
 
-    humburger.addEventListener('click', () => {
-        addActive('active-menu');
-    });
+    humburger.addEventListener('click',() =>  addActive('active-menu'));
 
     menuLink.forEach(item => {
         item.addEventListener('click', () => {
@@ -414,25 +377,9 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     // scrool up and smooth
-    function hideUp() {
-        up.classList.add('hide');
-        up.classList.remove('show');
-    }
-    function showUp() {
-        up.classList.add('show');
-        up.classList.remove('hide');
-    }
-    const up = document.querySelector('.pageUp');
-    up.classList.add('hide');
-    up.classList.remove('show');
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset + document.documentElement.clientHeight > 1000) {
-            showUp();
-        } else {
-            hideUp();
-        }
-    });
+
     const anchors = document.querySelectorAll('a[href*="#"]');
+    
     for (let anchor of anchors) {
         anchor.addEventListener('click', (e) => {
             e.preventDefault();
@@ -443,29 +390,61 @@ window.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+   
 
-    // const dataItem1 = document.querySelector('[data-item1]'),
-    //     dataItem2 = document.querySelector('[data-item2]'),
-    //     dataItem3 = document.querySelector('[data-item3]'),
-    //     dataItem4 = document.querySelector('[data-item4]'),
-    //     dataItem5 = document.querySelector('[data-item5]'),
-    //     weigthPtrice = document.querySelectorAll('.price'),
-    //     price11 = document.querySelector('#price1'),
-    //     price2 = document.querySelector('#price1'),
-    //     price3 = document.querySelector('#price1'),
-    //     price4 = document.querySelector('#price1'),
-    //     price5 = document.querySelector('#price1');
+
+    const up = document.querySelector('.pageUp');
+    hideMenu(up);
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset + document.documentElement.clientHeight > 1000) {
+           showClass(up);
+        } else {
+            hideMenu(up);
+        }
+    });
+    
+
+    const catalogBtn = document.querySelector('.header__catalog-btn'),
+        catalogMenu = document.querySelector('.header__catalog-item'),
+        catalogLink = document.querySelectorAll('.header__catalog-link');
+        
     
     
     
-   
-   
-   
-   
+    catalogBtn.addEventListener('click', () => {
+        catalogMenu.classList.toggle('hide');
+    });
+
+
+    catalogMenu.addEventListener('click', (e) => {
+        const target = e.target;
+        if (target && target.classList.contains('header__catalog-link')) {
+            catalogLink.forEach((item, i) => {
+                if (item == target) {
+                    catalogMenu.classList.toggle('hide');
+                    item.classList.toggle('activeCatalog');
+                    hideContent();
+                    showContent(i);
+                }
+            });
+        }
+    });
+    window.addEventListener('click', (e) => {
+        if (e.target && e.catalogMenu.classList('show')) {
+            catalogMenu.classList.add('hide');
+        }
+    });
  
-  
+
+
+
     
+
    
+       
+    
+  
+
 
 });
 
