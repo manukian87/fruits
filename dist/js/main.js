@@ -86,7 +86,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
         
 
-    //modal
+    //modal & btn
     
     const modalClose = document.querySelector('[data-close]'),
           modal = document.querySelector('.modal');
@@ -107,7 +107,7 @@ window.addEventListener('DOMContentLoaded', () => {
       
     window.addEventListener('click', function (event) {
         const target = event.target;
-        if (target && target.getAttribute('data-btn') == '') {
+        if (target && target.getAttribute('data-btn')=='') {
             modalTrigger = document.querySelectorAll('[data-btn]');
             modalTrigger.forEach(btn => {
                 btn.addEventListener('click', showModal);
@@ -221,7 +221,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // CardMenu
 
     class CardMenu {
-        constructor(title, src, alt, price1, price2, price3, price4, price5, subtitle, parentSelector, ...classes) {
+        constructor(title, src, alt, price1, price2, price3, price4, subtitle, parentSelector, ...classes) {
             this.title = title;
             this.src = src;
             this.alt = alt;
@@ -229,7 +229,6 @@ window.addEventListener('DOMContentLoaded', () => {
             this.price2 = price2;
             this.price3 = price3;
             this.price4 = price4;
-            this.price5 = price5;
             this.subtitle = subtitle;
             this.parent = document.querySelector(parentSelector);
             this.classes = classes;
@@ -253,7 +252,6 @@ window.addEventListener('DOMContentLoaded', () => {
                         <span class="price hide">${this.price2}</span>
                         <span class="price hide">${this.price3}</span>
                         <span class="price hide">${this.price4}</span>
-                        <span class="price hide">${this.price5}</span>
                         <div class="catalog__card_price_descr">грн. </div>
                     </div>
 
@@ -264,7 +262,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 <ul class="catalog__card_weight-wrapper">
                   <li class="catalog__card_weight-item active-min">100 г</li>
                   <li class="catalog__card_weight-item">200 г</li>
-                  <li class="catalog__card_weight-item">300 г</li>
                   <li class="catalog__card_weight-item">500 г</li>
                   <li class="catalog__card_weight-item">1000 г</li>
                 </ul>
@@ -281,24 +278,24 @@ window.addEventListener('DOMContentLoaded', () => {
     axios.get('http://localhost:3000/catalog__nuts')
         .then(data => {
             console.log(data);
-            data.data.forEach(({ title, img, altimg, price1, price2, price3, price4, price5, subtitle }) => {
-                new CardMenu(title, img, altimg, price1, price2, price3, price4, price5, subtitle, '.catalog__fruits .catalog__wrapper').render();
+            data.data.forEach(({ title, img, altimg, price1, price2, price3, price4, subtitle }) => {
+                new CardMenu(title, img, altimg, price1, price2, price3, price4, subtitle, '.catalog__fruits .catalog__wrapper').render();
             });
 
         });
     axios.get('http://localhost:3000/catalog__fruits')
         .then(data => {
             console.log(data);
-            data.data.forEach(({ title, img, altimg, price1, price2, price3, price4, price5, subtitle }) => {
-                new CardMenu(title, img, altimg, price1, price2, price3, price4, price5, subtitle, '.catalog__fruits .catalog__wrapper').render();
+            data.data.forEach(({ title, img, altimg, price1, price2, price3, price4, subtitle }) => {
+                new CardMenu(title, img, altimg, price1, price2, price3, price4, subtitle, '.catalog__fruits .catalog__wrapper').render();
             });
 
         });
     axios.get('http://localhost:3000/catalog__chocolate')
         .then(data => {
             console.log(data);
-            data.data.forEach(({ title, img, altimg, price1, price2, price3, price4, price5, subtitle }) => {
-                new CardMenu(title, img, altimg, price1, price2, price3, price4, price5, subtitle, '.catalog__chocolate .catalog__wrapper').render();
+            data.data.forEach(({ title, img, altimg, price1, price2, price3, price4, subtitle }) => {
+                new CardMenu(title, img, altimg, price1, price2, price3, price4, subtitle, '.catalog__chocolate .catalog__wrapper').render();
             });
 
         });
@@ -402,39 +399,47 @@ window.addEventListener('DOMContentLoaded', () => {
             hideMenu(up);
         }
     });
+
+
+    // catalogMenu
     
 
     const catalogBtn = document.querySelector('.header__catalog-btn'),
-        catalogMenu = document.querySelector('.header__catalog-item'),
-        catalogLink = document.querySelectorAll('.header__catalog-link');
+        catalogMenu = document.querySelector('.header__catalog-item');
+       let catalogLink = document.querySelectorAll('.header__catalog-link');
         
     
     
-    
-    catalogBtn.addEventListener('click', () => {
+    const actCatlMenu = () => {
         catalogMenu.classList.toggle('hide');
+    };
+
+    catalogBtn.addEventListener('click', actCatlMenu);
+
+    catalogLink.forEach((item,i) => {
+        item.addEventListener('click', () => {
+            actCatlMenu();
+            hideContent();
+            showContent(i);
+        });
     });
 
+     
 
-    catalogMenu.addEventListener('click', (e) => {
-        const target = e.target;
-        if (target && target.classList.contains('header__catalog-link')) {
-            catalogLink.forEach((item, i) => {
-                if (item == target) {
-                    catalogMenu.classList.toggle('hide');
-                    item.classList.toggle('activeCatalog');
-                    hideContent();
-                    showContent(i);
-                }
-            });
-        }
-    });
-    window.addEventListener('click', (e) => {
-        if (e.target && e.catalogMenu.classList('show')) {
-            catalogMenu.classList.add('hide');
-        }
-    });
  
+    // hellpMePlease!))
+    // 1. при первом нажатии на кнопку модальное окно не открывается, при повторном нажатии
+    //    срабатывает(нужно чтобы с первого раза)
+    // 2. при запросе через axios для получения данных, нужно чтобы подтягивала карточки в нужный таб (запрос задаю походу не правильный); 
+    //  или как-то можно по другому ?
+    // 3. на всех карточках нужно чтобы  весь (100г) был активен и соответсвующая цена была видна,
+    //  на данный момент только первая карточка высвечивается правильно, а остальные при нажатии только срабатывают, и 
+    //  не все кнопки срабатывают на карточках(купить, цены, весь)
+    // 4.1 При нажатии на кнопку купить, подтягивала именно тот товар на которую кликнули (при отправке на почту)
+            //  4.1 Если будет возможность.
+    // 5. нужен хостинг
+    // 6. и помочь залить БД (чтобы в дальнейшем клиент мог зайти туда, и коректировать даныые, добавлять, изменять цены).
+
 
 
 

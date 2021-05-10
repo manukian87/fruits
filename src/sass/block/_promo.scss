@@ -1,30 +1,44 @@
 .promo{
+    position: relative;
     min-height: 600px;
     background: url("../img/bg/promo.jpg") no-repeat 50% / cover;
     h1 {
       
         font-size: 60px;
         text-transform: uppercase;
-        color: $greenH1;
+        color: $green;
         margin: 0 auto;
+    
         span{
-            font-size: 36px;
+            font-size: 35px;
         }
     }
+    h2{
+        margin-bottom: 0;
+    }
     &__wrapper{
-        text-align: center;
-        margin-left: 124px;
-        padding-top: 103px;
+     padding: 40px 5px;
+     position: absolute;
+     text-align: center;
+     top: 75px;
+     padding-top: 35px;
+     width: 100%;
+     background-color: rgba(0, 0, 0, 0.8);
+     display: block;
     }
     &__title{
-        padding-top: 50px;
+        padding-top: 20px;
         color: $bacground;
         line-height: 48px;
         font-weight: 400;
     }
     &__descr{
+        display: block;
+        margin: 0 auto;
+        padding-top: 15px;
+        max-width: 500px;
         color: $bacground;
-        font-weight: 400;
+        font-weight: 300;
     }
     
 }

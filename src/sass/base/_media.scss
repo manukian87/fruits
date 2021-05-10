@@ -26,6 +26,12 @@
        
     }
     .promo{
+        h1{
+            span {
+                font-size: 23px;
+            }
+        }
+      
         .title{
             &_fz60{
                 font-size: 48px;
@@ -147,15 +153,11 @@
     }
     .promo{
         h1{
-            padding-left: 98px;
             font-size: 48px;
-        }
-        &__descr{
-            padding-left: 117px;
         }
         &__wrapper{
             margin-left: 0; 
-           padding-top: 141px;
+          
         }
         .title{
             padding-top: 0px;
@@ -176,8 +178,11 @@
             grid-template-columns: repeat(2, 1fr);
         }
         &__tabs{
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            min-height: 120px;
             &_item{
-                width: 140px;
+                width: 151px;
             }
         }
     }
@@ -237,12 +242,17 @@
     }
     .promo{
         h1 {
-           padding-left: 36px;
            font-size: 30px;
         }
         &__descr{
-            padding-left: 7px;
+            font-size: 16px;
         }
+        .title{
+            &_fz60{
+                font-size: 28px;
+            }
+        }
+        
 
     }
 
@@ -272,9 +282,6 @@
                 width: 180px;
                 position: absolute;
                 font-size: 13px;
-                flex-direction: column;
-                justify-content: center;
-                align-items: end;
                 top: 47px;
                 left: 14px;
                 text-transform: uppercase;
@@ -286,15 +293,16 @@
                 width: 100%;
                 padding: 10px;
                 a {
-                    // text-decoration: none;
+                    text-decoration: none;
                     color: #242424;
-                }
-                .activeCatalog {
-                    background-color: $bghover;
-                    color: #fff;
+                     .activeCatalog {
+                         background-color: $bghover;
+                         color: #fff;
 
 
+                     }
                 }
+               
             }
         }
         &__phone{
@@ -355,7 +363,15 @@
         }
        
         &__tabs{
-            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            &_item{
+                width: 110px;
+                margin-bottom: 5px;
+                padding-top: 7px;
+                height: 40px;
+                font-size: 11px;
+            }
         }
         &__wrapper{
             flex-direction: column;
@@ -446,13 +462,6 @@
 
 }
 
-@media (max-width: 375px) {
-    // .header{
-    //     &__phone{
-    //         left: 182px;
-    //     }
-    // }
-}
 @media (max-width: 320px) {
    
     .header {

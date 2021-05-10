@@ -1,14 +1,13 @@
 {
   "catalog__nuts": [
     {
-      "title": "Фрукт1",
+      "title": "орех",
       "img": "img/card/nuts/mindal.jpg",
       "altimg": "fr1",
       "price1": 4000,
       "price2": 50,
       "price3": 60,
       "price4": 70,
-      "price5": 80,
       "subtitle": "Фрукт1"
     },
     {
@@ -19,7 +18,6 @@
       "price2": 50,
       "price3": 60,
       "price4": 70,
-      "price5": 80,
       "subtitle": "Фрукт1"
     },
     {
@@ -30,7 +28,6 @@
       "price2": 500,
       "price3": 600,
       "price4": 70,
-      "price5": 80,
       "subtitle": "Фрукт2"
     },
     {
@@ -41,7 +38,6 @@
       "price2": 700,
       "price3": 900,
       "price4": 70,
-      "price5": 80,
       "subtitle": "Фрукт3"
     },
     {
@@ -52,64 +48,6 @@
       "price2": 700,
       "price3": 900,
       "price4": 70,
-      "price5": 80,
-      "subtitle": "Фрукт3"
-    }
-  ],
-  "catalog__chocolate": [
-    {
-      "title": "шоколад1",
-      "img": "img/card/shocolad/shoc1.jpg",
-      "altimg": "fr1",
-      "price1": 40,
-      "price2": 50,
-      "price3": 60,
-      "price4": 70,
-      "price5": 80,
-      "subtitle": "Фрукт1"
-    },
-    {
-      "title": "шоколад2",
-      "img": "img/card/shocolad/shoc1.jpg",
-      "altimg": "fr2",
-      "price1": 400,
-      "price2": 500,
-      "price3": 600,
-      "price4": 70,
-      "price5": 80,
-      "subtitle": "Фрукт2"
-    },
-    {
-      "title": "шоколад3",
-      "img": "img/card/shocolad/shoc1.jpg",
-      "altimg": "fr3",
-      "price1": 500,
-      "price2": 700,
-      "price3": 900,
-      "price4": 70,
-      "price5": 80,
-      "subtitle": "Фрукт3"
-    },
-    {
-      "title": "шоколад4",
-      "img": "img/card/shocolad/shoc1.jpg",
-      "altimg": "fr3",
-      "price1": 500,
-      "price2": 700,
-      "price3": 900,
-      "price4": 70,
-      "price5": 80,
-      "subtitle": "Фрукт3"
-    },
-    {
-      "title": "шоколад5",
-      "img": "img/card/shocolad/shoc1.jpg",
-      "altimg": "fr3",
-      "price1": 500,
-      "price2": 700,
-      "price3": 900,
-      "price4": 70,
-      "price5": 80,
       "subtitle": "Фрукт3"
     }
   ],
@@ -122,7 +60,6 @@
       "price2": 50,
       "price3": 60,
       "price4": 70,
-      "price5": 80,
       "subtitle": "Фрукт1"
     },
     {
@@ -133,7 +70,6 @@
       "price2": 50,
       "price3": 60,
       "price4": 70,
-      "price5": 80,
       "subtitle": "Фрукт1"
     },
     {
@@ -144,7 +80,6 @@
       "price2": 500,
       "price3": 600,
       "price4": 70,
-      "price5": 80,
       "subtitle": "Фрукт2"
     },
     {
@@ -155,7 +90,58 @@
       "price2": 700,
       "price3": 900,
       "price4": 70,
-      "price5": 80,
+      "subtitle": "Фрукт3"
+    }
+  ],
+  "catalog__chocolate": [
+    {
+      "title": "шоколад1",
+      "img": "img/card/shocolad/shoc1.jpg",
+      "altimg": "fr1",
+      "price1": 40,
+      "price2": 50,
+      "price3": 60,
+      "price4": 70,
+      "subtitle": "Фрукт1"
+    },
+    {
+      "title": "шоколад2",
+      "img": "img/card/shocolad/shoc1.jpg",
+      "altimg": "fr2",
+      "price1": 400,
+      "price2": 500,
+      "price3": 600,
+      "price4": 70,
+      "subtitle": "Фрукт2"
+    },
+    {
+      "title": "шоколад3",
+      "img": "img/card/shocolad/shoc1.jpg",
+      "altimg": "fr3",
+      "price1": 500,
+      "price2": 700,
+      "price3": 900,
+      "price4": 70,
+      "subtitle": "Фрукт3"
+    },
+    {
+      "title": "шоколад4",
+      "img": "img/card/shocolad/shoc1.jpg",
+      "altimg": "fr3",
+      "price1": 500,
+      "price2": 700,
+      "price3": 900,
+      "price4": 70,
+      "subtitle": "Фрукт3"
+    },
+    {
+      "title": "шоколад5",
+      "img": "img/card/shocolad/shoc1.jpg",
+      "altimg": "fr3",
+      "price1": 500,
+      "price2": 700,
+      "price3": 900,
+      "price4": 70,
       "subtitle": "Фрукт3"
     }
   ],

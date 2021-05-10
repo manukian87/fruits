@@ -19,6 +19,9 @@
         align-items: center;
         text-transform: uppercase;
         list-style-type: none;
+        margin: 15px auto;
+        max-width: 700px;
+        font-size: 12px;
         &_item{
             text-align: center;
             padding-top: 12px;
@@ -30,6 +33,8 @@
             background-color: $bacground;
             transition: 1.2s ease all;
             cursor: pointer;
+            font-weight: bold;
+            
             &:hover{
                 background-color: $bghover;
                 color: $white;
